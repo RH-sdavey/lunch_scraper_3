@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <title>Lunch Scraper - Sean Davey</title>
+    <!-- Favicon-->
+    <link href="{{ url_for('static', filename='assets/favicon.ico') }}" rel="icon" type="image/x-icon"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='assets/css/styles.css') }}" rel="stylesheet"/>
+</head>
+<body>
+<!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <p class="navbar-brand">
+                <a style="color:white" href="{{ url_for('index_route') }}">Lunch Scraper{% block city %}{% endblock %}</a>
+            <button aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse"
+                    type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a aria-current="page" class="nav-link active" href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Page Content-->
+    {% block pageheader %}{% endblock %}
+    {% block pagecontent %}{% endblock %}
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">
+            Sean Davey TODO(Add github and linkedin) 2021</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
+
+</body>
+</html>

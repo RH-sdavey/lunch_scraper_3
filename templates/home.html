@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+  {% block city %}{% endblock %}
+
+  {% block pageheader %}
+
+    <!-- Heading Row-->
+    <div class="container px-5 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5 imagebox">
+            <div class="col-lg-7">
+              <img alt="..." class="img-fluid rounded mb-4 mb-lg-0" src="https://picsum.photos/id/163/900/400"/>
+            </div>
+            <div class="col-lg-4">
+              <span class="imagebox-desc col-lg-5">Lunch Scraper
+                  <p>Welcome to my Lunch Scraper Application. TODO hero description here</p>
+              </span>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+  {% block pagecontent %}
+
+    <div class="container px-4 px-lg-5">
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            {% for city, value in card_data.items() -%}
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ city | capitalize }}</h2>
+                        <p class="card-text">{{ value.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary btn-sm" href="{{ url_for('city_route', city=city) }}">Go To {{ city | capitalize }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  {% endblock %}

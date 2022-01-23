@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+  {% block city %} / <a style="color:white" href="{{ url_for('city_route', city=city.name) }}">{{ city.name | capitalize }} </a>{% endblock %}
+
+    <!-- Heading Row-->
+  {% block pageheader %}
+    <div class="container px-5 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5 imagebox">
+            <div class="col-lg-7">
+              <img alt="..." class="img-fluid rounded mb-4 mb-lg-0" src="/static/assets/img/{{ city.name }}.jpg"/>
+            </div>
+            <div class="col-lg-4">
+              <span class="imagebox-desc col-lg-5"><h1 class="font-weight-light">{{ city.name | capitalize }}</h1>
+                  <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it
+                    makes a great use of the standard Bootstrap core components. Feel free to use this template for any
+                    project you want!</p>
+              </span>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+
+
+  {% block pagecontent %}
+
+    <div class="container px-4 px-lg-5">
+
+        <!-- Restaurant Filter-->
+        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for restaurant name"/>
+<!-- Example split danger button -->
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Choose District
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    {% for district in city.districts %}
+                  <li><a class="dropdown-item" href="{{ url_for('district_route', city=city.name, district=district.name) }}">{{ district.name }}</a></li>
+                    {% endfor %}
+                </ul>
+              </div>
+            </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5" id="restaurant_cards">
+            {% for district in city.districts -%}
+            {% for restaurant in district.restaurants %}
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ restaurant.name | capitalize }}</h2>
+                        <p class="card-text">{{ restaurant.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <i class="badge">{{ district }}</i>
+                        <a class="btn btn-primary btn-sm"
+                           href="{{ url_for('restaurant_route', city=city.name, district=district.name, restaurant=restaurant.name) }}">Go To {{ restaurant.name }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <script>
+    function myFunction() {
+        var input, filter, cards, cardContainer, h5, keep_card, card_titles, badge_texts, i, j;
+
+        input = document.getElementById("myFilter");
+        filter = input.value.toUpperCase();
+        cardContainer = document.getElementById("restaurant_cards");
+        cards = cardContainer.getElementsByClassName("card");
+        for (i = 0; i < cards.length; i++) {
+            //We will switch keep_card to true if we find search text in badge or title
+            keep_card = false;
+            //querySelectorAll returns all elements of a.badge. querySelector returns only the first element
+            card_titles = cards[i].querySelectorAll(".card-body h2.card-title");
+            badge_texts = cards[i].querySelectorAll(".card-footer i.badge");
+
+            //You must loop through all card titles.
+            for(j = 0; j < card_titles.length; j++) {
+                if (card_titles[j].innerText.toUpperCase().indexOf(filter) > -1) {
+                    //Found search text, now lets switch keep_card on
+                    keep_card = true;
+                    break;
+                }
+            }
+
+            if(keep_card) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+
+        }
+    }
+    </script>
+  {% endblock %}
