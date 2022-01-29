@@ -683,6 +683,10 @@ progress {
   margin-top: var(--bs-gutter-y);
 }
 
+.row > div {
+  padding-left: 0;
+}
+
 .col {
   flex: 1 0 0%;
 }
@@ -11322,3 +11326,10 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
+#restaurant_cards {
+  margin-top: 2rem;
+}
+
+.district-list {
+  margin-top: 2rem;
+}

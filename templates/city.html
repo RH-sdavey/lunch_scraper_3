@@ -4,13 +4,13 @@
 
     <!-- Heading Row-->
   {% block pageheader %}
-    <div class="container px-5 px-lg-5">
+    <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center my-5 imagebox">
-            <div class="col-lg-7">
+            <div class="col-lg-6">
               <img alt="..." class="img-fluid rounded mb-4 mb-lg-0" src="/static/assets/img/{{ city.name }}.jpg"/>
             </div>
             <div class="col-lg-4">
-              <span class="imagebox-desc col-lg-5"><h1 class="font-weight-light">{{ city.name | capitalize }}</h1>
+              <span class="imagebox-desc col-lg-4"><h1 class="font-weight-light">{{ city.name | capitalize }}</h1>
                   <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it
                     makes a great use of the standard Bootstrap core components. Feel free to use this template for any
                     project you want!</p>
@@ -26,22 +26,17 @@
   {% block pagecontent %}
 
     <div class="container px-4 px-lg-5">
-
+        <div class="row gx-4 gx-lg-5">
         <!-- Restaurant Filter-->
-        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for restaurant name"/>
-<!-- Example split danger button -->
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-              <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Choose District
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    {% for district in city.districts %}
-                  <li><a class="dropdown-item" href="{{ url_for('district_route', city=city.name, district=district.name) }}">{{ district.name }}</a></li>
-                    {% endfor %}
-                </ul>
-              </div>
+            <div class="col-md-8 mb-8" >
+                <input type="text" id="myFilter" class="col-md-12 mb-12" onkeyup="myFunction()" placeholder="Search for restaurant name or choose a district of {{ city.name | capitalize }} below"/>
             </div>
+            <div class="list-group district-list col-md-4 mb-4" style="margin-top:-0.5rem">
+            {% for district in city.districts -%}
+                <a href="{{ url_for('district_route', city=city.name, district=district.name) }}" class="list-group-item list-group-item-action list-group-item-dark">{{ district.name | capitalize }}</a>
+            {% endfor %}
+            </div>
+        </div>
         <!-- Content Row-->
         <div class="row gx-4 gx-lg-5" id="restaurant_cards">
             {% for district in city.districts -%}
@@ -53,7 +48,6 @@
                         <p class="card-text">{{ restaurant.description }}</p>
                     </div>
                     <div class="card-footer">
-                        <i class="badge">{{ district }}</i>
                         <a class="btn btn-primary btn-sm"
                            href="{{ url_for('restaurant_route', city=city.name, district=district.name, restaurant=restaurant.name) }}">Go To {{ restaurant.name }}
                         </a>
@@ -89,6 +83,7 @@
                     break;
                 }
             }
+
 
             if(keep_card) {
                 cards[i].style.display = "";

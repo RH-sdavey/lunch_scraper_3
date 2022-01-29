@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from functools import singledispatch
 
 @dataclass
 class Restaurant:
