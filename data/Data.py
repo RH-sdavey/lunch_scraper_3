@@ -1,10 +1,13 @@
 from dataclasses import dataclass
+from typing import Optional
+
 
 @dataclass
 class Restaurant:
     name: str
-    website: str
+    url: str
     description: str
+    html_section: Optional[dict | list | tuple | set]
 
 
 @dataclass
@@ -30,13 +33,15 @@ data = {
                 restaurants=[
                     Restaurant(
                         name='pupek',
-                        website="pupek.com",
-                        description="a fine place"
+                        url="pupek.com",
+                        description="a fine place",
+                        html_section=None
                     ),
                     Restaurant(
                         name='pupek2',
-                        website="pupek2.com",
-                        description="a fine place2"
+                        url="pupek2.com",
+                        description="a fine place2",
+                        html_section=None
                     ),
                 ]
             ),
@@ -45,13 +50,15 @@ data = {
                 restaurants=[
                     Restaurant(
                         name='sean',
-                        website="sean",
-                        description="sean"
+                        url="sean",
+                        description="sean",
+                        html_section=None
                     ),
                     Restaurant(
                         name='centrumpupek2',
-                        website="centrumpupek2.com",
-                        description="centruma fine place2"
+                        url="centrumpupek2.com",
+                        description="centruma fine place2",
+                        html_section=None
                     ),
                 ]
             ),
@@ -67,24 +74,26 @@ data = {
                 restaurants=[
                     Restaurant(
                         name='olomoucpupek',
-                        website="olomoucpupek.com",
-                        description="a fine place"
+                        url="olomoucpupek.com",
+                        description="a fine place",
+                        html_section=None
                     )
                 ]
             )
         ]
     ),
-    'prague': City(
-        name='prague',
-        description='Lovely city in prague',
+    'ostrava': City(
+        name='ostrava',
+        description='lovely ostrava',
         districts=[
             District(
-                name="praguelondynske",
+                name="centrum",
                 restaurants=[
                     Restaurant(
-                        name='praguepupek',
-                        website="praguepupek.com",
-                        description="a fine place"
+                        name='makalu',
+                        url="http://www.nepalska-restaurace-makalu.cz/ostrava.php",
+                        description="Indian Restaurant with Mix Thali dishes",
+                        html_section=('div', {'id': 'T_menu'})
                     )
                 ]
             )
@@ -97,5 +106,16 @@ def data_dict():
     return data
 
 
-def get_data_for_(city):
+def city_data(city):
     return data[city]
+
+
+def district_data(city, district):
+    city = city_data(city)
+    return [_ for _ in city.districts if _.name == district][0]
+
+
+def restaurant_data(city, district, restaurant):
+    city = city_data(city)
+    district = [_ for _ in city.districts if _.name == district][0]
+    return [_ for _ in district.restaurants if _.name == restaurant][0]

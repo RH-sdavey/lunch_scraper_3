@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
     {% block city %}
-        <a style="color:white" href="{{ url_for('city_route', city=city.name) }}"> / {{ city.name | capitalize }}</a>
-        <a style="color:white" href="{{ url_for('district_route', city=city.name, district=district.name) }}"> / {{ district.name | capitalize }}</a>
-        <a style="color:white" href="{{ url_for('restaurant_route', city=city.name, district=district.name, restaurant=restaurant.name) }}"> / {{ restaurant.name | capitalize }}</a>
+        <a style="color:white" href="{{ url_for('city_route', city=city) }}"> / {{ city | capitalize }}</a>
+        <a style="color:white" href="{{ url_for('district_route', city=city, district=district) }}"> / {{ district | capitalize }}</a>
+        <a style="color:white" href="{{ url_for('restaurant_route', city=city, district=district, restaurant=restaurant) }}"> / {{ restaurant| capitalize }}</a>
     {% endblock %}
 
     <!-- Heading Row-->
@@ -14,7 +14,7 @@
               <img alt="..." class="img-fluid rounded mb-4 mb-lg-0" src="https://picsum.photos/900/400"/>
             </div>
             <div class="col-lg-4">
-              <span class="imagebox-desc col-lg-5"><h1 class="font-weight-light">{{ restaurant.name | capitalize }}</h1>
+              <span class="imagebox-desc col-lg-5"><h1 class="font-weight-light">{{ restaurant | capitalize }}</h1>
                   <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it
                     makes a great use of the standard Bootstrap core components. Feel free to use this template for any
                     project you want!</p>
@@ -26,4 +26,7 @@
 
 
   {% block pagecontent %}
+    {% for item in daily_menu %}
+        {{ item  | replace(",", "<br/>") | safe }}
+    {% endfor %}
   {% endblock %}
