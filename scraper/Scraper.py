@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as bs4
-import unidecode
 from abc import ABC, abstractmethod
-from collections import namedtuple
 
 
 class Scraper(ABC):
@@ -22,8 +20,8 @@ class Scraper(ABC):
         soup = None
         try:
             page = requests.get(self.url)
-            data = page.content
-            soup = bs4(data, 'html.parser')
+            content = page.content
+            soup = bs4(content, 'html.parser')
         except Exception as e:
             print(f"Soup: Error, {e}", end=' ')
             exit(1)
@@ -35,10 +33,16 @@ class Scraper(ABC):
         :return:
         """
         html_tag, html_attr_selector = self.html_section
-        desired_part = self.soup_object.find(html_tag, attrs=html_attr_selector)
-        print("TODO: next line could be json/list if better?")
+        desired_part = self.soup_object.find_all(html_tag, attrs=html_attr_selector, recursive=True)
         return desired_part
 
     @abstractmethod
     def cleanup(self, daily_menu):
         pass
+
+
+class PdfScraper:
+    """A PDF Scraper Object"""
+    def __init__(self, name, url):
+        self.name = name
+        self.url = url

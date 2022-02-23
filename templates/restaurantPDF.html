@@ -28,9 +28,6 @@
   {% block pagecontent %}
     <div
       class="d-flex align-items-center justify-content-center" style="width: 80%; height:100%; margin-left:10rem;">
-          {% for item in daily_menu %}
-              {{ item | safe }}
-                <br/>
-          {% endfor %}
+        {{ daily_menu | safe }}
     </div>
   {% endblock %}

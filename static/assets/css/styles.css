@@ -11334,14 +11334,32 @@ textarea.form-control-lg {
   margin-top: 2rem;
 }
 
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
 
 
+
+ /* ===================== RESTAURANT STYLING ===========================*/
+
+  /* ===== MAKALU ========*/
 .TJdatum {
     color:red;
     font-size:2rem;
 }
 
+  /* =====PUPEK========*/
+
+.menu_jidlo_poradi {
+    width:202px;
+}
 
 
-
-
+.zfr3Q > span {
+    color:black !important;
+}

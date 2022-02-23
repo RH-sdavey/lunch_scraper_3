@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block city %} / Weekend Break {% endblock %}
+
+<!-- Heading Row-->
+{% block pageheader %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 align-items-center my-5 imagebox">
+        <div class="col-lg-6">
+            <img alt="..." class="img-fluid rounded mb-4 mb-lg-0" src="https://picsum.photos/900/500"/>
+        </div>
+        <div class="col-lg-4">
+              <span class="imagebox-desc col-lg-4"><h1 class="font-weight-light">Weekend Break</h1>
+                  <p>I don't scrape daily menu data on weekends, come back on Monday<br/>
+                  There also may be some errors on public holidays,<br/>
+                  or if you visit very early on Monday morning (before the website has updated their daily menu)</p>
+                  <p>O víkendech neškrábu denní údaje o menu, vraťte se v pondělí<br/>
+                    Mohou se také vyskytnout některé chyby o státních svátcích,<br/>
+                    nebo pokud navštívíte velmi brzy v pondělí ráno (předtím, než webové stránky aktualizovaly své denní menu)</p>
+              </span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pagecontent %}
+{% endblock %}

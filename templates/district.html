@@ -2,7 +2,7 @@
 
     {% block city %}
         <a style="color:white" href="{{ url_for('city_route', city=city) }}"> / {{ city | capitalize }}</a>
-        <a style="color:white" href="{{ url_for('district_route', city=city, district=district) }}"> / {{ district.name | capitalize }}</a>
+        <a style="color:white" href="{{ url_for('district_route', city=city, district=district.name) }}"> / {{ district.name | capitalize }}</a>
     {% endblock %}
 
 
@@ -38,7 +38,7 @@
             <div class="col-md-4 mb-5">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title">{{ restaurant.name | capitalize }}</h2>
+                        <h2 class="card-title">{{ restaurant.public_name | capitalize }}</h2>
                         <p class="card-text">{{ restaurant.description }}</p>
                     </div>
                     <div class="card-footer">
