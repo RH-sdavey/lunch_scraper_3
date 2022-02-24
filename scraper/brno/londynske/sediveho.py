@@ -1,12 +1,10 @@
 from scraper.Scraper import Scraper
-from data.Data import restaurant_data
 
 
 class Sediveho(Scraper):
 
-    def __init__(self, city, district, restaurant, **kwargs):
-        self.data = restaurant_data(city, district, restaurant)
-        super().__init__(self.data.name, self.data.url, self.data.html_section, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.todays_slice = {
             'Mon': slice(4, 11),
             'Tue': slice(12, 19),

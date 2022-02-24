@@ -1,14 +1,12 @@
 from datetime import datetime
 
 from scraper.Scraper import PdfScraper
-from data.Data import restaurant_data
 
 
 class Morgans(PdfScraper):
-    def __init__(self, city, district, restaurant, **kwargs):
-        self.data = restaurant_data(city, district, restaurant)
+    def __init__(self, **kwargs):
         self.olo_morgans = 'olo-morgans.jpg'
-        super().__init__(self.data.name, self.data.url, **kwargs)
+        super().__init__(**kwargs)
 
     def scrape_data(self, **kwargs):
         day, month, full_month, year = self.get_dates_as_ints()

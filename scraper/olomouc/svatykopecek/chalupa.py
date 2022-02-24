@@ -1,11 +1,12 @@
-from data.Data import restaurant_data
+from scraper.Scraper import Scraper
 
 
-class Chalupa():
-    def __init__(self, city, district, restaurant, **kwargs):
-        _ = kwargs
-        self.data = restaurant_data(city, district, restaurant)
+class Chalupa(Scraper):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
-    @staticmethod
-    def scrape_data():
+    def scrape_data(self):
         return '<img src="/static/assets/pdfs_sites/chalupa.jpg"/>'
+
+    def cleanup(self):
+        ...

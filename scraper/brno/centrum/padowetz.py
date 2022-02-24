@@ -4,9 +4,8 @@ from data.Data import restaurant_data
 
 class Padowetz(Scraper):
 
-    def __init__(self, city, district, restaurant, **kwargs):
-        self.data = restaurant_data(city, district, restaurant)
-        super().__init__(self.data.name, self.data.url, self.data.html_section, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.todays_slice = {
             'Mon': 0,
             'Tue': 1,

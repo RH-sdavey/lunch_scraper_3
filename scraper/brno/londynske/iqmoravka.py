@@ -1,12 +1,10 @@
 from scraper.Scraper import PdfScraper
-from data.Data import restaurant_data
 
 
 class Iqmoravka(PdfScraper):
-    def __init__(self, city, district, restaurant, **kwargs):
-        self.data = restaurant_data(city, district, restaurant)
+    def __init__(self, **kwargs):
         self.brno_IQ = "brno_IQ.pdf"
-        super().__init__(self.data.name, self.data.url, **kwargs)
+        super().__init__(**kwargs)
 
     def scrape_data(self, **kwargs):
         return super(Iqmoravka, self).scrape_data(self.brno_IQ, custom_url=self.data.url + self.day_pdf())

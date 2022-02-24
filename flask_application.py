@@ -47,9 +47,7 @@ def district_route(city, district):
 @lunch_scraper_3.route('/<string:city>/<string:district>/<string:restaurant>')
 def restaurant_route(city, district, restaurant):
     """Route for any restaurant page (eg: /brno/londynske/pupek)"""
-    today = datetime.now().ctime().split()[0]
-    i_dont_scrape_on_weekends(today)
-    daily_menu, rest_data = init_restaurant_module(city, district, restaurant, today)
+    daily_menu, rest_data = init_restaurant_module(city, district, restaurant)
     if type(daily_menu) == str:  # static path to a pdf or img file
         return render_template(
             'restaurantPDF.html',
@@ -76,7 +74,9 @@ def init_restaurant_module(*args):
     :return: scraped denni menu, restaurant data
     :rtype: tuple
     """
-    city, district, restaurant, today = args
+    today = datetime.now().ctime().split()[0]
+    i_dont_scrape_on_weekends(today)
+    city, district, restaurant = args
     module = f'scraper.{city}.{district}.{restaurant}'
     gbl[module] = importlib.import_module(module)
     module = gbl[module].__dict__[restaurant.capitalize()](

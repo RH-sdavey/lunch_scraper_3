@@ -1,14 +1,11 @@
 from scraper.Scraper import PdfScraper
-from data.Data import restaurant_data
 
 
 class Naosmicce(PdfScraper):
 
-    def __init__(self, city, district, restaurant, **kwargs):
-        _ = kwargs
-        self.data = restaurant_data(city, district, restaurant)
+    def __init__(self, **kwargs):
         self.brno_osmicce = "brno_osmicce.pdf"
-        super().__init__(self.data.name, self.data.url)
+        super().__init__(**kwargs)
 
     def scrape_data(self, **kwargs):
         return super(Naosmicce, self).scrape_data(self.brno_osmicce)

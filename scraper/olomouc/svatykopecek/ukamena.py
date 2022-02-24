@@ -1,14 +1,16 @@
-from data.Data import restaurant_data
+
+from scraper.Scraper import Scraper
 
 
-class Ukamena:
+class Ukamena(Scraper):
 
-    def __init__(self, city, district, restaurant, **kwargs):
-        _ = kwargs
-        self.data = restaurant_data(city, district, restaurant)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
-    @staticmethod
-    def scrape_data():
+    def scrape_data(self):
         return '<img style="width: 30rem; height:30rem;" src="/static/assets/pdfs_sites/k1.jpg"/>' \
                '<img style="width: 30rem; height:30rem;" src="/static/assets/pdfs_sites/k2.jpg"/>' \
-               '<img style="width: 30rem; height:30rem;" src="/static/assets/pdfs_sites/k3.jpg"/>' \
+               '<img style="width: 30rem; height:30rem;" src="/static/assets/pdfs_sites/k3.jpg"/>'
+
+    def cleanup(self, **kwargs):
+        ...
