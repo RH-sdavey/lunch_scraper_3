@@ -1,15 +1,14 @@
-import wget
-
 from scraper.Scraper import PdfScraper
 from data.Data import restaurant_data
 
 
-class Naosmicce:
+class Naosmicce(PdfScraper):
 
     def __init__(self, city, district, restaurant, **kwargs):
         _ = kwargs
         self.data = restaurant_data(city, district, restaurant)
+        self.brno_osmicce = "brno_osmicce.pdf"
+        super().__init__(self.data.name, self.data.url)
 
-    def scrape_data(self):
-        return '<embed src="/static/assets/pdfs_sites/osmicce.pdf" width="1212px" height="1200px" />'
-
+    def scrape_data(self, **kwargs):
+        return super(Naosmicce, self).scrape_data(self.brno_osmicce)

@@ -10,7 +10,8 @@ class Tenmanya:
         _ = kwargs
         self.data = restaurant_data(city, district, restaurant)
 
-    def scrape_data(self):
+    @staticmethod
+    def scrape_data():
         return '<img src="/static/assets/pdfs_sites/t1.jpg"/>' \
                '<img src="/static/assets/pdfs_sites/t2.jpg"/>' \
                '<img src="/static/assets/pdfs_sites/t3.jpg"/>' \

@@ -1,6 +1,3 @@
-import wget
-
-from scraper.Scraper import PdfScraper
 from data.Data import restaurant_data
 
 
@@ -10,6 +7,6 @@ class Himalaya:
         _ = kwargs
         self.data = restaurant_data(city, district, restaurant)
 
-    def scrape_data(self):
+    @staticmethod
+    def scrape_data():
         return '<img src="/static/assets/pdfs_sites/himalaya.jpg"/>'
-

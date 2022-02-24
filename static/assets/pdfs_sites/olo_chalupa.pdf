@@ -1,0 +1,368 @@
+<!--[if lte IE 9]><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd"><![endif]-->
+<!DOCTYPE html>
+
+<!--[if IE]><html class="ie" lang="cs"><![endif]-->
+<!--[if gt IE 9]><!--> 
+<html lang="cs">
+<!--<![endif]-->
+
+    <head>
+        <!--[if lt IE 8]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><![endif]--><!--[if IE 8]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"><![endif]--><!--[if IE 9]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"><![endif]-->
+        <base href="https://testchalupa.webnode.cz/">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="Webnode">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">  <link rel="icon" type="image/svg+xml" href="/favicon16.svg" sizes="16x16">  <link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://testchalupa.webnode.cz/jidelni-listek/">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.testchalupa.webnode.cz/jidelni-listek/" >
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-797705-6', 'auto',{"name":"wnd_header"});ga('wnd_header.set', 'dimension1', 'W1');ga('wnd_header.set', 'anonymizeIp', true);ga('wnd_header.send', 'pageview');var pageTrackerAllTrackEvent=function(category,action,opt_label,opt_value){ga('send', 'event', category, action, opt_label, opt_value)};</script>
+  <link rel="alternate" type="application/rss+xml" href="https://testchalupa.webnode.cz/rss/all.xml" title="Všechny články">
+<!--[if lte IE 9]><style type="text/css">.cke_skin_webnode iframe {vertical-align: baseline !important;}</style><![endif]-->
+        <title>Jídelní lístek :: Chalupa na schůdkách</title>
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <script type="text/javascript" src="https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/js/lib.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/css/style.css" media="screen,handheld,projection">
+        <link rel="stylesheet" type="text/css" href="https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/css/print.css" media="print">
+    
+				<script type="text/javascript">
+				/* <![CDATA[ */
+					
+					if (typeof(RS_CFG) == 'undefined') RS_CFG = new Array();
+					RS_CFG['staticServers'] = new Array('https://d11bh4d8fhuq47.cloudfront.net/');
+					RS_CFG['skinServers'] = new Array('https://d11bh4d8fhuq47.cloudfront.net/');
+					RS_CFG['filesPath'] = 'https://testchalupa.webnode.cz/_files/';
+					RS_CFG['filesAWSS3Path'] = 'https://d6scj24zvfbbo.cloudfront.net/99762d0941ec7d47ae40fc26221be804/';
+					RS_CFG['lbClose'] = 'Zavřít';
+					RS_CFG['skin'] = 'default';
+					if (!RS_CFG['labels']) RS_CFG['labels'] = new Array();
+					RS_CFG['systemName'] = 'Webnode';
+						
+					RS_CFG['responsiveLayout'] = 0;
+					RS_CFG['mobileDevice'] = 0;
+					RS_CFG['labels']['copyPasteSource'] = 'Více zde:';
+					
+				/* ]]> */
+				</script><style type="text/css">/* <![CDATA[ */#c8ecb3khc {position: absolute;font-size: 13px !important;font-family: "Arial", helvetica, sans-serif !important;white-space: nowrap;z-index: 2147483647;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-o-user-select: none;user-select: none;}#f4k9d9cg33 {position: relative;top: -14px;}* html #f4k9d9cg33 { top: -11px; }#f4k9d9cg33 a { text-decoration: none !important; }#f4k9d9cg33 a:hover { text-decoration: underline !important; }#alfaejk7432 {z-index: 2147483647;display: inline-block !important;font-size: 16px;padding: 7px 59px 9px 59px;background: transparent url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonWebnodeHover.png?ph=7e0306022c) top left no-repeat;height: 18px;cursor: pointer;}* html #alfaejk7432 { height: 36px; }#alfaejk7432:hover { background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonWebnode.png?ph=7e0306022c) top left no-repeat; }#b5o26074k { display: none; }#d13h43g2udkt70 {z-index: 3000;text-align: left !important;position: absolute;height: 88px;font-size: 13px !important;color: #ffffff !important;font-family: "Arial", helvetica, sans-serif !important;overflow: hidden;cursor: pointer;}#d13h43g2udkt70 a {color: #ffffff !important;}#hcfcaa6aq {color: #36322D !important;text-decoration: none !important;font-weight: bold !important;float: right;height: 31px;position: absolute;top: 19px;right: 15px;cursor: pointer;}#cji6e8h5mdie { float: right; padding-right: 27px; display: block; line-height: 31px; height: 31px; background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButton.png?ph=7e0306022c) top right no-repeat; white-space: nowrap; }#d6uwjjs1rmsa { position: relative; left: 1px; float: left; display: block; width: 15px; height: 31px; background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButton.png?ph=7e0306022c) top left no-repeat; }#hcfcaa6aq:hover { color: #36322D !important; text-decoration: none !important; }#hcfcaa6aq:hover #cji6e8h5mdie { background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHover.png?ph=7e0306022c) top right no-repeat; }#hcfcaa6aq:hover #d6uwjjs1rmsa { background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHover.png?ph=7e0306022c) top left no-repeat; }#f47fd17gklh {padding-right: 11px;padding-right: 11px;float: right;height: 60px;padding-top: 18px;background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubble.png?ph=7e0306022c) top right no-repeat;}#e9tulvl2m {float: left;width: 18px;height: 78px;background: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubble.png?ph=7e0306022c) top left no-repeat;}* html #alfaejk7432 { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonWebnode.png?ph=7e0306022c'); background: transparent; }* html #alfaejk7432:hover { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonWebnodeHover.png?ph=7e0306022c'); background: transparent; }* html #f47fd17gklh { height: 78px; background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubbleIE6.png?ph=7e0306022c);  }* html #e9tulvl2m { background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubbleIE6.png?ph=7e0306022c);  }* html #cji6e8h5mdie { background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonIE6.png?ph=7e0306022c); }* html #d6uwjjs1rmsa { background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonIE6.png?ph=7e0306022c); }* html #hcfcaa6aq:hover #rbcGrSigTryButtonRight { background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHoverIE6.png?ph=7e0306022c);  }* html #hcfcaa6aq:hover #rbcGrSigTryButtonLeft { background-image: url(https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHoverIE6.png?ph=7e0306022c);  }/* ]]> */</style><script type="text/javascript" src="https://d11bh4d8fhuq47.cloudfront.net/_system/client/js/compressed/frontend.package.1-3-87.js?ph=7e0306022c"></script><style type="text/css"></style></head>
+
+    <body>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+           
+                RubicusFrontendIns.addAbsoluteHeaderBlockId('headerMenu');
+
+            /* ]]> */
+        </script>    
+
+        <div id="pageWrapper">
+    
+            <div id="page">
+        
+                <div id="headerWrapper">
+        
+                    <div id="header">
+                    
+                        <div id="headerLogo">                    
+                            <div id="logo"><a href="home/" title="Přejít na úvodní stránku."><span id="rbcSystemIdentifierLogo" style="visibility: hidden;">Chalupa na schůdkách</span></a></div>                            <script type="text/javascript"> /* <![CDATA[ */ logoCentering(); /* ]]> */ </script>                            
+                        </div> <!-- id="headerLogo" -->
+                        
+                        <div class="cleaner"></div>
+                
+                        <div class="quick">
+                            <ul>                                
+                                <li class="homepage"><a href="home/" title="Přejít na úvodní stránku."><span class="hidden">Úvodní stránka</span></a></li>
+                                <li class="sitemap"><a href="/sitemap/" title="Přejít na mapu stránek."><span class="hidden">Mapa stránek</span></a></li>
+                                <li class="print"><a href="#" onclick="window.print(); return false;" title="Vytisknout stránku"><span class="hidden">Tisk</span></a></li>
+                                <li class="rss"><a href="/rss/" title="RSS kanály"><span class="hidden">RSS</span></a></li>
+                            </ul>
+                        </div> <!-- class="quick" -->
+                        
+                        <div id="languageSelect"></div>			
+                        
+                        <hr class="hidden">
+                
+                        <div id="headerMenu">
+                            
+<ul class="menu">
+	<li class="first"><a href="/home/">Úvodní stránka</a></li>
+	<li><a href="/o-nas/">O nás</a></li>
+	<li class="open selected activeSelected"><a href="/jidelni-listek/">Jídelní lístek</a></li>
+	<li><a href="/fotogalerie/">Fotogalerie</a></li>
+	<li><a href="/kontakt/">Kontakt</a></li>
+	<li class="last"><a href="/napiste-nam/">Napište nám</a></li>
+</ul>			
+                        </div> <!-- id="mainMenu" -->
+                        
+                        <hr class="hidden">
+                        
+                        <div class="cleaner"></div>
+                            
+                        <div id="navigator">
+                            <div id="pageNavigator" class="rbcContentBlock"><span class="separator"><span class="invisible"> &gt; </span></span><a class="navFirstPage" href="/home/">Úvodní stránka</a><span class="separator"><span class="invisible"> &gt; </span></span><span id="navCurrentPage">Jídelní lístek</span></div>                        </div> <!-- id="navigator" -->
+                        
+                        <hr class="hidden">                
+                        
+                        <div class="cleaner"></div>
+                
+                </div> <!-- id="header" -->
+                    
+                </div> <!-- id="headerWrapper" -->
+                
+                <div id="contentWrapper">
+                
+                    <div id="content" class="threeCols">
+                    
+                        <div id="mainColumn"> 
+                        
+                            <div id="illustration">
+                                <div class="in1">
+                                    <div class="in2">
+                                        <img src="https://testchalupa.webnode.cz/_files/200000003-40b2441a94/50000000.jpg?ph=7e0306022c" width="602" height="129" alt="">                                        <br class="hidden">
+                                        <span class="slogan"><span id="rbcCompanySlogan" class="rbcNoStyleSpan"></span></span>
+                                    </div>
+                                </div>
+                            </div> <!-- id="illustration" -->                                                   
+                            
+                            
+			
+
+
+							<div class="box photogallery small">
+
+								<h2>Jídelní lístek</h2>
+
+								<div class="list">
+
+			
+		
+			
+
+			
+		
+			
+
+									
+			
+                                    <div class="photo">
+                                        <div class="cropper">
+                                            <table><tr><td onmouseover="colour(this);" onmouseout="decolour(this);" onclick="RubicusFrontendIns.showPhotogalleryDetailPhoto(this.firstChild.firstChild.href); Event.stop(event);"><span class="thumbnail"><a href="/album/jidelni-listek/jidelni-listek-konec-roku-jpg/" title="Zobrazit celou fotografii." onclick="RubicusFrontendIns.showPhotogalleryDetailPhoto(this.href); Event.stop(event);"><img src="https://testchalupa.webnode.cz/_files/system_preview_small_200000350-4e1224e124-public/jídelní listek konec roku.jpg" width="86" height="118" alt="/album/jidelni-listek/jidelni-listek-konec-roku-jpg/"></a></span></td></tr></table>
+                                        </div> <!-- class="cropper" -->
+
+                                        
+
+                                    </div><!-- class="photo" -->
+
+			
+											
+									<div class="cleaner-1"></div>
+
+			
+		
+			
+
+			
+		
+			
+
+                                    <div class="cleaner"></div>
+
+								</div><!-- class="list" -->
+
+                                <div class="pagination">
+
+                                    
+
+                                    
+
+                                    <div class="cleaner"></div>
+
+                                </div><!-- class="pagination" -->
+
+								<hr class="hidden">
+
+                                <div class="cleaner"></div>
+
+							</div><!-- class="box photogallery small" -->
+
+
+			
+		<script type="text/javascript">/*<![CDATA[*/RS_CFG['useOldMobileTemplate'] = false;RubicusFrontendIns.setPhotogalleryInit('', '/servers/frontend/',['jidelni-listek','LIGHTBOX',1,'{PHOTO} z {TOTAL}','Zavřít','Předchozí','Následující','Spustit automatické procházení obrázků','Pozastavit automatické procházení obrázků']);/*]]>*/</script>                         
+                        </div> <!-- id="mainColumn" -->
+                        
+                        <div id="leftColumn">
+                                            
+                            			
+                                                
+                            
+
+                            <div class="leftSearch box">
+
+		<form action="/search/" method="get" id="fulltextSearch">
+
+                                <h2>Vyhledávání</h2>
+                                <fieldset>   
+                                    <label for="fulltextSearchText">Hledat:</label>
+                                    <input type="text" id="fulltextSearchText" name="text" value="">
+                                    <button type="submit" class="submit"><span class="hidden">Hledat</span></button>
+                                </fieldset>
+
+		</form>
+
+                                <hr class="hidden">
+
+                                <div class="cleaner"></div>
+
+                            </div> <!-- class="leftSearch box" -->
+
+		
+                            
+
+
+                            <div class="box contact">
+
+								<h2>Kontakt</h2>
+
+                                <div class="in">
+
+		 
+        
+    								<div class="wsw">
+                                        <address>
+
+                                            <strong>Chalupa na schůdkách</strong>
+                                            <span class="cleaner block"></span>
+
+                                            
+                                            <br class="hidden"><br class="hidden">
+                                            <span class="bigIcon iconAddress"></span>
+                                            <span class="address">     
+                                                Sadové náměstí 9/28, <br />
+783 51 Svatý Kopeček
+                                            </span>
+                                            <span class="cleaner block"></span>
+    
+
+                                            
+                                            <br class="hidden"><br class="hidden">
+                                            <span class="bigIcon iconPhone"></span>
+                                            <span class="phone">
+                                                585 385 343
+                                            </span>
+                                            <span class="cleaner block"></span>
+    
+
+                                            
+                                            <br class="hidden"><br class="hidden">
+                                            <span class="bigIcon iconEmail"></span>
+                                            <span class="email">
+                                                <a href="&#109;&#97;&#105;&#108;&#116;&#111;:&#99;&#104;&#97;&#108;&#117;&#112;&#97;&#45;&#110;&#97;&#45;&#115;&#99;&#104;&#117;&#100;&#107;&#97;&#99;&#104;&#64;&#115;&#101;&#122;&#110;&#97;&#109;&#46;&#99;&#122;"><span id="rbcContactEmail">&#99;&#104;&#97;&#108;&#117;&#112;&#97;&#45;&#110;&#97;&#45;&#115;&#99;&#104;&#117;&#100;&#107;&#97;&#99;&#104;&#64;&#115;&#101;&#122;&#110;&#97;&#109;&#46;&#99;&#122;</span></a>
+                                            </span>
+                                            <span class="cleaner block"></span> 
+    
+
+    								    </address>
+                                    </div>
+
+		
+
+                                </div> <!-- class="in" -->
+
+								<hr class="hidden">
+
+                                <div class="cleaner"></div>
+
+							</div><!-- class="box contact" -->
+
+
+					
+                            
+                            
+                                                                    
+
+                        </div> <!-- id="leftColumn" -->
+        
+                        <div class="cleaner"></div>
+        
+                    </div> <!-- id="content" -->
+            
+                </div> <!-- id="contentWrapper" -->
+                
+                <div class="cleaner"></div>
+                
+                <div id="footerWrapper">
+    
+                    <div id="footer">
+                    
+                        <div class="text">
+                            <span id="rbcFooterText" class="rbcNoStyleSpan"></span>      
+                        </div>                                                
+                        
+                        <hr class="hidden">
+                
+                        <div class="rubicus">            
+                            <span class="rbcSignatureText"><a rel="nofollow" href="https://www.webnode.cz?utm_source=text&amp;utm_medium=footer&amp;utm_campaign=free1">Vytvořte si webové stránky zdarma!</a><a id="alfaejk7432" rel="nofollow" href="https://www.webnode.cz?utm_source=button&amp;utm_medium=footer&amp;utm_campaign=free1"><span id="b5o26074k">Webnode</span></a></span>                        </div>
+                        
+                    </div> <!-- id="footer" -->                
+                
+                </div> <!-- id="footerWrapper" -->  
+            
+            </div> <!-- id="page" -->
+            
+        </div> <!-- id="pageWrapper" -->        
+        
+                <script type="text/javascript">
+            /* <![CDATA[ */
+           
+                RubicusFrontendIns.faqInit('faq', 'answerBlock');
+
+                RubicusFrontendIns.addObserver({
+                    onContentChange: function ()
+                    {
+                        logoCentering();
+                    },
+                    
+                    onStartSlideshow: function()
+                    {
+                        $('slideshowControl').innerHTML = 'Pozastavit prezentaci';
+                        $('slideshowControl').title = 'Pozastavit automatické procházení obrázků';
+                        $('slideshowControl').onclick = function() { RubicusFrontendIns.stopSlideshow(); return false; }
+                    },
+
+                    onStopSlideshow: function()
+                    {
+                        $('slideshowControl').innerHTML = 'Spustit prezentaci';
+                        $('slideshowControl').title = 'Spustit automatické procházení obrázků';
+                        $('slideshowControl').onclick = function() { RubicusFrontendIns.startSlideshow(); return false; }
+                    },
+
+                    onShowImage: function()
+                    {
+                        if (RubicusFrontendIns.isSlideshowMode())
+                        {
+                            $('slideshowControl').innerHTML = 'Pozastavit prezentaci';
+                            $('slideshowControl').title = 'Pozastavit automatické procházení obrázků';
+                            $('slideshowControl').onclick = function() { RubicusFrontendIns.stopSlideshow(); return false; }
+                        }   
+                    }
+                });
+                
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/headerMenuActive.png');
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/leftColumnMenuItemInOpen.png');
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/leftColumnMenuItemInSelect.png');
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/iconArrowUp.png');                                
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/iconArrowDown.png');
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/loading.gif');
+                RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/_system/skins/v8/50000019/img/loading-box.gif');
+                
+            /* ]]> */
+        </script>
+        
+    <div id="rbcFooterHtml"></div><div style="display: none;" id="c8ecb3khc"><span id="f4k9d9cg33">&nbsp;</span></div><div id="d13h43g2udkt70" style="display: none;"><a href="https://www.webnode.cz?utm_source=window&amp;utm_medium=footer&amp;utm_campaign=free1" rel="nofollow"><div id="e9tulvl2m"><!-- / --></div><div id="f47fd17gklh"><div><strong id="ag815kn2">WEBOVÉ STRÁNKY ZDARMA</strong><br /><span id="dihmgem4k8f">Chcete mít moderní web?</span></div><span id="hcfcaa6aq"><span id="d6uwjjs1rmsa"><!-- / --></span><span id="cji6e8h5mdie">Vyzkoušet</span></span></div></a></div><script type="text/javascript">/* <![CDATA[ */var cc91f8412elm = {sig: $('c8ecb3khc'),prefix: $('f4k9d9cg33'),btn : $('alfaejk7432'),win : $('d13h43g2udkt70'),winLeft : $('e9tulvl2m'),winLeftT : $('bf34b7b52n'),winLeftB : $('i7fige43bb7005'),winRght : $('f47fd17gklh'),winRghtT : $('e8b373d728lb'),winRghtB : $('a6df5e26n'),tryBtn : $('hcfcaa6aq'),tryLeft : $('d6uwjjs1rmsa'),tryRght : $('cji6e8h5mdie'),text : $('dihmgem4k8f'),title : $('ag815kn2')};cc91f8412elm.sig.appendChild(cc91f8412elm.btn);var m7si0n2=0,e6a3nem407=0,b46kjb71f3c6f0a=0,haogje5886wb,fkn4cmq3663=$$('.rbcSignatureText')[0],cdib5h1rjp3=false,ndl1i6i;function a8n0bob13si(){if (!cdib5h1rjp3 && pageTrackerAllTrackEvent){pageTrackerAllTrackEvent('Signature','Window show - branch',cc91f8412elm.sig.getElementsByTagName('a')[0].innerHTML);cdib5h1rjp3=true;}cc91f8412elm.win.show();b46kjb71f3c6f0a=cc91f8412elm.tryLeft.offsetWidth+cc91f8412elm.tryRght.offsetWidth+1;cc91f8412elm.tryBtn.style.width=parseInt(b46kjb71f3c6f0a)+'px';cc91f8412elm.text.parentNode.style.width = '';cc91f8412elm.winRght.style.width=parseInt(20+b46kjb71f3c6f0a+Math.max(cc91f8412elm.text.offsetWidth,cc91f8412elm.title.offsetWidth))+'px';cc91f8412elm.win.style.width=parseInt(cc91f8412elm.winLeft.offsetWidth+cc91f8412elm.winRght.offsetWidth)+'px';var wl=cc91f8412elm.sig.offsetLeft+cc91f8412elm.btn.offsetLeft+cc91f8412elm.btn.offsetWidth-cc91f8412elm.win.offsetWidth+12;if (wl<10){wl=10;}cc91f8412elm.win.style.left=parseInt(wl)+'px';cc91f8412elm.win.style.top=parseInt(e6a3nem407-cc91f8412elm.win.offsetHeight)+'px';clearTimeout(haogje5886wb);}function fsata22h0(){haogje5886wb=setTimeout('cc91f8412elm.win.hide()',1000);}function h4e7j461c(){var ph = RubicusFrontendIns.photoDetailHandler.lightboxFixed?document.getElementsByTagName('body')[0].offsetHeight/2:RubicusFrontendIns.getPageSize().pageHeight;cc91f8412elm.sig.show();m7si0n2=0;e6a3nem407=0;if (fkn4cmq3663&&fkn4cmq3663.offsetParent){var obj=fkn4cmq3663;do{m7si0n2+=obj.offsetLeft;e6a3nem407+=obj.offsetTop;} while (obj = obj.offsetParent);}if ($('rbcFooterText')){cc91f8412elm.sig.style.color = $('rbcFooterText').getStyle('color');cc91f8412elm.sig.getElementsByTagName('a')[0].style.color = $('rbcFooterText').getStyle('color');}cc91f8412elm.sig.style.width=parseInt(cc91f8412elm.prefix.offsetWidth+cc91f8412elm.btn.offsetWidth)+'px';if (m7si0n2<0||m7si0n2>document.body.offsetWidth){m7si0n2=(document.body.offsetWidth-cc91f8412elm.sig.offsetWidth)/2;}if (m7si0n2>(document.body.offsetWidth*0.55)){cc91f8412elm.sig.style.left=parseInt(m7si0n2+(fkn4cmq3663?fkn4cmq3663.offsetWidth:0)-cc91f8412elm.sig.offsetWidth)+'px';}else{cc91f8412elm.sig.style.left=parseInt(m7si0n2)+'px';}if (e6a3nem407<=0 || RubicusFrontendIns.photoDetailHandler.lightboxFixed){e6a3nem407=ph-5-cc91f8412elm.sig.offsetHeight;}cc91f8412elm.sig.style.top=parseInt(e6a3nem407-5)+'px';}function c1265ffgmjhn(){if (ndl1i6i){clearTimeout(ndl1i6i);}ndl1i6i = setTimeout('h4e7j461c()', 10);}Event.observe(window,'load',function(){if (cc91f8412elm.win&&cc91f8412elm.btn){if (fkn4cmq3663){if (fkn4cmq3663.getElementsByTagName("a").length > 0){cc91f8412elm.prefix.innerHTML = fkn4cmq3663.innerHTML + '&nbsp;';}else{cc91f8412elm.prefix.innerHTML = '<a href="https://www.webnode.cz?utm_source=text&amp;utm_medium=footer&amp;utm_content=cz-branch-0&amp;utm_campaign=signature" rel="nofollow">'+fkn4cmq3663.innerHTML + '</a>&nbsp;';}fkn4cmq3663.style.visibility='hidden';}else{if (pageTrackerAllTrackEvent){pageTrackerAllTrackEvent('Signature','Missing rbcSignatureText','testchalupa.webnode.cz');}}h4e7j461c();setTimeout(h4e7j461c, 500);setTimeout(h4e7j461c, 1000);setTimeout(h4e7j461c, 5000);Event.observe(cc91f8412elm.btn,'mouseover',a8n0bob13si);Event.observe(cc91f8412elm.win,'mouseover',a8n0bob13si);Event.observe(cc91f8412elm.btn,'mouseout',fsata22h0);Event.observe(cc91f8412elm.win,'mouseout',fsata22h0);Event.observe(cc91f8412elm.win,'click',function(){if (pageTrackerAllTrackEvent){pageTrackerAllTrackEvent('Signature','Window click - branch','WEBOVÉ STRÁNKY ZDARMA',0);}document/*do1ga7k15f*/.location.href='https://www.webnode.cz?utm_source=window&utm_medium=footer&utm_content=cz-branch-0&utm_campaign=signature';});Event.observe(window, 'resize', c1265ffgmjhn);Event.observe(document.body, 'resize', c1265ffgmjhn);RubicusFrontendIns.addObserver({onResize: c1265ffgmjhn});RubicusFrontendIns.addObserver({onContentChange: c1265ffgmjhn});RubicusFrontendIns.addObserver({onLightboxUpdate: h4e7j461c});Event.observe(cc91f8412elm.btn, 'click', function(){if (pageTrackerAllTrackEvent){pageTrackerAllTrackEvent('Signature','Button click - branch',cc91f8412elm.sig.getElementsByTagName('a')[0].innerHTML);}});Event.observe(cc91f8412elm.tryBtn, 'click', function(){if (pageTrackerAllTrackEvent){pageTrackerAllTrackEvent('Signature','Try Button click - branch','WEBOVÉ STRÁNKY ZDARMA',0);}});}});RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonWebnode.png?ph=7e0306022c');RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButton.png?ph=7e0306022c');RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHover.png?ph=7e0306022c');RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubble.png?ph=7e0306022c');if (Prototype.Browser.IE){RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerBubbleIE6.png?ph=7e0306022c');RubicusFrontendIns.addFileToPreload('https://d11bh4d8fhuq47.cloudfront.net/img/footer/footerButtonHoverIE6.png?ph=7e0306022c');}RubicusFrontendIns.copyLink = 'https://www.webnode.cz';RS_CFG['labels']['copyPasteBackLink'] = 'Vytvořte si vlastní stránky zdarma:';/* ]]> */</script><script type="text/javascript">var keenTrackerCmsTrackEvent=function(id){if(typeof _keenTracker=="undefined" || !_keenTracker){return false;};try{var name=_keenEvents[id];var keenEvent={user:{u:_keenData.u,p:_keenData.p,lc:_keenData.lc,t:_keenData.t},action:{identifier:id,name:name,category:'cms',platform:'WND1',version:'2.1.157'},browser:{url:location.href,ua:navigator.userAgent,referer_url:document.referrer,resolution:screen.width+'x'+screen.height,ip:'217.170.106.123'}};_keenTracker.addEvent('PROD',keenEvent,function(err,res){});}catch(err){};};</script></body>
+    
+</html>    

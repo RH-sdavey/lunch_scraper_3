@@ -11343,6 +11343,11 @@ footer {
     overflow: hidden;
 }
 
+.social_icon {
+    width:2rem;
+    height:2rem;
+}
+
 
 
  /* ===================== RESTAURANT STYLING ===========================*/

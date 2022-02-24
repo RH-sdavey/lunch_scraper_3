@@ -27,7 +27,7 @@ class City:
 data = {
     'brno': City(
         name='brno',
-        description='Lovely city in Moravia',
+        description='Brno is a city in the South Moravian Region of the Czech Republic. Located at the confluence of the Svitava and Svratka rivers, Brno has about 380,000 inhabitants, making it the second-largest city in the Czech Republic after the capital, Prague, and one of the 100 largest cities of the EU.',
         districts=[
             District(
                 name="londynske",
@@ -233,7 +233,7 @@ data = {
                     Restaurant(
                         name='naosmicce',
                         public_name="Na Osmicce",
-                        url="http://www.naosmicce.cz/",
+                        url="http://www.naosmicce.cz/Menu.pdf",
                         description="jnfenokwf",
                         html_section=('div', {'fake': 'fake'})
                         ),
@@ -257,7 +257,7 @@ data = {
         ),
     'olomouc': City(
         name='olomouc',
-        description='Lovely city in olomouc',
+        description='Olomouc has about 100,000 inhabitants, and its larger urban zone has a population of about 384,000 inhabitants.',
         districts=[
             District(
                 name="centrum",
@@ -305,12 +305,45 @@ data = {
                         html_section=('div', {'fake': 'fake'})
                         ),
                     ]
-                )
-            ]
+                ),
+            District(
+                name="svatykopecek",
+                restaurants=[
+                    Restaurant(
+                        name='umacku',
+                        public_name="Restaurace U Macků",
+                        url="http://www.restauraceumacku.cz/?section=denni-menu",
+                        description="Nice comfortable bar with friendly staff",
+                        html_section=('div', {'class': 'obsah'})
+                    ),
+                    Restaurant(
+                        name='chalupa',
+                        public_name="Chalupa na schůdkách",
+                        url="https://testchalupa.webnode.cz/jidelni-listek/#jidelni-listek-konec-roku-jpg",
+                        description="Excellent beer garden",
+                        html_section=('div', {'fake': 'fake'})
+                        ),
+                    Restaurant(
+                        name='ukamena',
+                        public_name="U Kameňa",
+                        url="http://ukamena.webmium.com/jidelnicek",
+                        description="One of the best bars in whole CZ, perfect",
+                        html_section=('div', {'fake': 'fake'})
+                        ),
+                    Restaurant(
+                        name='umaci',
+                        public_name="Hospůdka U Maci",
+                        url="http://www.hospudkaumaci.cz/jidelni-listek/",
+                        description="Beautiful local bar close to Olomouc Zoo",
+                        html_section=('div', {'class': 'post-content'})
+                        ),
+                ],
+            ),
+        ],
         ),
     'ostrava': City(
         name='ostrava',
-        description='lovely ostrava',
+        description='Ostrava is the capital of the Moravian-Silesian Region. It has about 285,000 inhabitants. It lies 15 km (9 mi) from the border with Poland, at the confluences of four rivers: Oder, Opava, Ostravice and Lučina. Ostrava is the third largest city in the Czech Republic.',
         districts=[
             District(
                 name="centrum",
