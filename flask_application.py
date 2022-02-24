@@ -3,7 +3,7 @@ from datetime import datetime
 
 from flask import Flask, render_template
 
-from data.Data import data_dict, city_data, district_data, restaurant_data
+from data.Data import data_dict, city_data, district_data
 
 lunch_scraper_3 = Flask(__name__)
 
@@ -14,7 +14,7 @@ gbl = globals()
 @lunch_scraper_3.route('/index.html')
 @lunch_scraper_3.route('/home.html')
 def index_route():
-    """City names and descriptions"""
+    """Route for home page"""
     return render_template(
         'home.html',
         card_data=data_dict()
@@ -23,6 +23,7 @@ def index_route():
 
 @lunch_scraper_3.route('/<string:city>')
 def city_route(city):
+    """Route for any city page (eg: /brno)"""
     city = city_data(city)
     scraped_totals = get_scraped_totals(city)
     return render_template(
@@ -34,6 +35,7 @@ def city_route(city):
 
 @lunch_scraper_3.route('/<string:city>/<string:district>')
 def district_route(city, district):
+    """Route for any district page (eg: /brno/londynske)"""
     district = district_data(city, district)
     return render_template(
         'district.html',
@@ -44,6 +46,7 @@ def district_route(city, district):
 
 @lunch_scraper_3.route('/<string:city>/<string:district>/<string:restaurant>')
 def restaurant_route(city, district, restaurant):
+    """Route for any restaurant page (eg: /brno/londynske/pupek)"""
     today = datetime.now().ctime().split()[0]
     i_dont_scrape_on_weekends(today)
     daily_menu, rest_data = init_restaurant_module(city, district, restaurant, today)
@@ -67,7 +70,13 @@ def restaurant_route(city, district, restaurant):
     )
 
 
-def init_restaurant_module(city, district, restaurant, today):
+def init_restaurant_module(*args):
+    """Dynamically load the restaurant scraper module
+
+    :return: scraped denni menu, restaurant data
+    :rtype: tuple
+    """
+    city, district, restaurant, today = args
     module = f'scraper.{city}.{district}.{restaurant}'
     gbl[module] = importlib.import_module(module)
     module = gbl[module].__dict__[restaurant.capitalize()](
@@ -76,9 +85,7 @@ def init_restaurant_module(city, district, restaurant, today):
         restaurant=restaurant,
         today=today
     )
-    rest_data = restaurant_data(city, district, restaurant)
-    daily_menu = module.scrape_data()
-    return daily_menu, rest_data
+    return module.scrape_data(), module.data
 
 
 def i_dont_scrape_on_weekends(today):
@@ -89,7 +96,6 @@ def i_dont_scrape_on_weekends(today):
 def get_scraped_totals(city):
     districts = len(city.districts)
     restaurants = sum([len(district.restaurants) for district in city.districts])
-
     return districts, restaurants
 
 

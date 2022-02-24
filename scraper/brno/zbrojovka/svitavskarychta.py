@@ -8,10 +8,6 @@ class Svitavskarychta(Scraper):
         self.data = restaurant_data(city, district, restaurant)
         super().__init__(self.data.name, self.data.url, self.data.html_section, **kwargs)
 
-    def scrape_data(self):
-        daily_menu = self.daily_menu_from_soup_object()
-        return self.cleanup(daily_menu)
-
     def cleanup(self, daily_menu):
         return daily_menu
 

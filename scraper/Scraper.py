@@ -45,6 +45,9 @@ class Scraper(ABC):
         desired_part = self.soup.find_all(html_tag, attrs=html_attr_selector, recursive=True)
         return desired_part
 
+    def scrape_data(self):
+        return self.cleanup(self.daily_menu_from_soup_object())
+
     @abstractmethod
     def cleanup(self, daily_menu):
         """Each website has its own html implementation and must be cleaned in their own way"""
