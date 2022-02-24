@@ -5,9 +5,7 @@ from data.Data import restaurant_data
 class Pupek(Scraper):
     def __init__(self, city, district, restaurant, **kwargs):
         self.data = restaurant_data(city, district, restaurant)
-        self.today = kwargs.get('today')
-        print(self.data)
-        super().__init__(self.data.name, self.data.url, self.data.html_section)
+        super().__init__(self.data.name, self.data.url, self.data.html_section, **kwargs)
 
     def scrape_data(self):
         daily_menu = self.daily_menu_from_soup_object()

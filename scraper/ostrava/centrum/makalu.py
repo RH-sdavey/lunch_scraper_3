@@ -1,8 +1,6 @@
-import bs4
-
 from scraper.Scraper import Scraper
 from data.Data import restaurant_data
-from bs4.element import Tag, NavigableString
+
 
 
 class Makalu(Scraper):

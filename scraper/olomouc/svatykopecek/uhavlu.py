@@ -2,7 +2,7 @@ from scraper.Scraper import Scraper
 from data.Data import restaurant_data
 
 
-class Utrechcertu(Scraper):
+class Uhavlu(Scraper):
 
     def __init__(self, city, district, restaurant, **kwargs):
         self.data = restaurant_data(city, district, restaurant)

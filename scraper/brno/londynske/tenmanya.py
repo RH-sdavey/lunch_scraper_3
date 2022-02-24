@@ -1,6 +1,3 @@
-import wget
-
-from scraper.Scraper import PdfScraper
 from data.Data import restaurant_data
 
 

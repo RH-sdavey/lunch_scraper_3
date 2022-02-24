@@ -7,10 +7,8 @@ from data.Data import restaurant_data
 class Morgans(PdfScraper):
     def __init__(self, city, district, restaurant, **kwargs):
         self.data = restaurant_data(city, district, restaurant)
-        self.today = kwargs.get('today')
         self.olo_morgans = 'olo-morgans.jpg'
-
-        super().__init__(self.data.name, self.data.url)
+        super().__init__(self.data.name, self.data.url, **kwargs)
 
     def scrape_data(self, **kwargs):
         day, month, full_month, year = self.get_dates_as_ints()
@@ -19,8 +17,6 @@ class Morgans(PdfScraper):
 
     @staticmethod
     def get_dates_as_ints():
-        day = datetime.now().day
         month = datetime.now().month
         full_month = f"0{month}" if month < 10 else month
-        year = datetime.now().year
-        return day, month, full_month, year
+        return datetime.now().day, month, full_month, datetime.now().year

@@ -304,6 +304,13 @@ data = {
                         description="wdwdw",
                         html_section=('div', {'fake': 'fake'})
                         ),
+                    Restaurant(
+                        name='jizdarna',
+                        public_name="Restaurace Jízdárna",
+                        url="https://restaurant-jizdarna.cz/poledni-menu/",
+                        description="wdwdw",
+                        html_section=('div', {'id': 'content'})
+                        ),
                     ]
                 ),
             District(
@@ -336,6 +343,13 @@ data = {
                         url="http://www.hospudkaumaci.cz/jidelni-listek/",
                         description="Beautiful local bar close to Olomouc Zoo",
                         html_section=('div', {'class': 'post-content'})
+                        ),
+                    Restaurant(
+                        name='uhavlu',
+                        public_name="Hostinec u Havlů",
+                        url="https://www.uhavlu.cz/jidelni-listek/",
+                        description="Bdwdwdwdw",
+                        html_section=('div', {'class': 'container'})
                         ),
                 ],
             ),

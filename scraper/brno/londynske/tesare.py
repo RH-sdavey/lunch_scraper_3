@@ -6,8 +6,7 @@ class Tesare(Scraper):
 
     def __init__(self, city, district, restaurant, **kwargs):
         self.data = restaurant_data(city, district, restaurant)
-        self.today = kwargs.get('today')
-        super().__init__(self.data.name, self.data.url, self.data.html_section)
+        super().__init__(self.data.name, self.data.url, self.data.html_section, **kwargs)
 
     def scrape_data(self):
         return self.daily_menu_from_soup_object()

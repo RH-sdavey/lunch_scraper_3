@@ -10,7 +10,9 @@ from abc import ABC, abstractmethod
 class Scraper(ABC):
     """A website daily menu scraping object"""
 
-    def __init__(self, name, url, html_section):
+    def __init__(self, name, url, html_section, **kwargs):
+        _ = kwargs
+        self.today = kwargs.get("today", "No date available")
         self.name = name
         self.url = url
         self.html_section = html_section
@@ -51,7 +53,8 @@ class Scraper(ABC):
 
 class PdfScraper:
     """A PDF Scraper Object"""
-    def __init__(self, name, url):
+    def __init__(self, name, url, **kwargs):
+        self.today = kwargs.get("today", "no date available")
         self.name = name
         self.url = url
         self.local_path = "/static/assets/pdfs_sites/"
