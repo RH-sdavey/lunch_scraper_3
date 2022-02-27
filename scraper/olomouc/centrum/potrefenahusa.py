@@ -8,4 +8,3 @@ class Potrefenahusa(Scraper):
 
     def cleanup(self, daily_menu):
         return daily_menu
-

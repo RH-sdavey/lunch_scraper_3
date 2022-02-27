@@ -1,5 +1,4 @@
 from scraper.Scraper import Scraper
-from data.Data import restaurant_data
 
 
 class Musilce(Scraper):
@@ -9,4 +8,3 @@ class Musilce(Scraper):
 
     def cleanup(self, daily_menu):
         return daily_menu[0]
-

@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
     {% block city %}
-        <a style="color:white" href="{{ url_for('city_route', city=city) }}"> / {{ city | capitalize }}</a>
-        <a style="color:white" href="{{ url_for('district_route', city=city, district=district.name) }}"> / {{ district.name | capitalize }}</a>
+        <a id="city-crumb"  style="color:white" href="{{ url_for('city_route', city=city) }}"> / {{ city | capitalize }}</a>
+        <a id="district-crumb"  style="color:white" href="{{ url_for('district_route', city=city, district=district.name) }}"> / {{ district.name | capitalize }}</a>
     {% endblock %}
 
 

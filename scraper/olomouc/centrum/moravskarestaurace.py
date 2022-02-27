@@ -8,4 +8,3 @@ class Moravskarestaurace(Scraper):
 
     def cleanup(self, daily_menu):
         return daily_menu[0]
-

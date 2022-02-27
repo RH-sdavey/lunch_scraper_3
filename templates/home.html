@@ -38,7 +38,9 @@
                         <p class="card-text">{{ value.description }}</p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary btn-sm" href="{{ url_for('city_route', city=city) }}">Go To {{ city | capitalize }}</a>
+                        <a href="{{ url_for('city_route', city=city) }}">
+                            <button class="btn btn-primary btn-sm btn-{{ city }}">Go To {{ city | capitalize }}</button>
+                        </a>
                     </div>
                 </div>
             </div>

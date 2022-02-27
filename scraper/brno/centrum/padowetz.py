@@ -1,5 +1,4 @@
 from scraper.Scraper import Scraper
-from data.Data import restaurant_data
 
 
 class Padowetz(Scraper):

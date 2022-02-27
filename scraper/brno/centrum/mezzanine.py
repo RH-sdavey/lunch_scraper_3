@@ -1,11 +1,14 @@
-from data.Data import restaurant_data
+from scraper.Scraper import Scraper
 
 
-class Mezzanine:
+class Mezzanine(Scraper):
 
-    def __init__(self, city, district, restaurant, **kwargs):
-        _ = kwargs
-        self.data = restaurant_data(city, district, restaurant)
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def cleanup(self, daily_menu):
+        return daily_menu
+
 
     @staticmethod
     def scrape_data():

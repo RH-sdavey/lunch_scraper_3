@@ -6,11 +6,12 @@ class Tenmanya(Scraper):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def scrape_data(self):
+    @staticmethod
+    def scrape_data(**kwargs):
         return '<img src="/static/assets/pdfs_sites/t1.jpg"/>' \
                '<img src="/static/assets/pdfs_sites/t2.jpg"/>' \
                '<img src="/static/assets/pdfs_sites/t3.jpg"/>' \
 
 
     def cleanup(self, daily_menu):
-        pass
+        return daily_menu

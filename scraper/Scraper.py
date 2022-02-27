@@ -5,7 +5,6 @@ import requests
 import wget
 from bs4 import BeautifulSoup as Bs4
 from abc import ABC, abstractmethod
-
 from data.Data import restaurant_data
 
 
@@ -13,10 +12,11 @@ class Scraper(ABC):
     """A website daily menu scraping object"""
 
     def __init__(self, **kwargs):
+
         self.data = restaurant_data(kwargs.get('city'), kwargs.get('district'), kwargs.get('restaurant'))
+        self.today = kwargs.get("today", "No date available")
         self.url = self.data.url
         self.html_section = self.data.html_section
-        self.today = kwargs.get("today", "No date available")
         self.soup = self.soup_object()
 
     def soup_object(self):
@@ -57,14 +57,14 @@ class Scraper(ABC):
 
 class PdfScraper:
     """A PDF Scraper Object"""
-    def __init__(self, **kwargs):
-        self.url = None
-        self.data = restaurant_data(kwargs.get('city'), kwargs.get('district'), kwargs.get('restaurant'))
+    def __init__(self, name, url, **kwargs):
         self.today = kwargs.get("today", "no date available")
+        self.name = name
+        self.url = url
         self.local_path = "/static/assets/pdfs_sites/"
 
     def scrape_data(self, menu_name, custom_url=None):
-        self.url = custom_url if custom_url else self.data.url
+        self.url = custom_url if custom_url else self.url
         embed_path = f"{self.local_path}{menu_name}"
         local_path = f".{self.local_path}{menu_name}"
         self.cleanup_old(local_path)

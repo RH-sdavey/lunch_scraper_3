@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-  {% block city %} / <a style="color:white" href="{{ url_for('city_route', city=city.name) }}">{{ city.name | capitalize }} </a>{% endblock %}
+  {% block city %} / <a id="city-crumb" style="color:white" href="{{ url_for('city_route', city=city.name) }}">{{ city.name | capitalize }} </a>{% endblock %}
 
     <!-- Heading Row-->
   {% block pageheader %}

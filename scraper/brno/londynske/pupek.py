@@ -2,6 +2,7 @@ from scraper.Scraper import Scraper
 
 
 class Pupek(Scraper):
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 

@@ -1,8 +1,8 @@
 from scraper.Scraper import Scraper
-from data.Data import restaurant_data
 
 
 class Union(Scraper):
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
