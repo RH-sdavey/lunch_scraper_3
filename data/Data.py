@@ -8,7 +8,7 @@ class Restaurant:
     url: str
     description: str
     public_name: str
-    html_section: Optional[dict | list | tuple | set]
+    html_section: tuple
 
 
 @dataclass
