@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
+# Comment to trigger deployment
 
 @dataclass
 class Restaurant:
