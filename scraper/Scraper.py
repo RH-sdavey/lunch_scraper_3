@@ -12,7 +12,6 @@ class Scraper(ABC):
     """A website daily menu scraping object"""
 
     def __init__(self, **kwargs):
-
         self.data = restaurant_data(kwargs.get('city'), kwargs.get('district'), kwargs.get('restaurant'))
         self.today = kwargs.get("today", "No date available")
         self.url = self.data.url
@@ -20,13 +19,12 @@ class Scraper(ABC):
         self.soup = self.soup_object()
 
     def soup_object(self):
-        """Requests a sites contents, and parses the html into a "soup" object -> self.soup_object
+        """Requests a sites contents, and parses the html into a "soup" object -> self.soup
 
         :return: soup object representing websites html
         :rtype: BeautifulSoup
         :raises Exception if error on scraping/parsing
         """
-        soup = None
         try:
             page = requests.get(self.url)
             content = page.content
@@ -57,14 +55,14 @@ class Scraper(ABC):
 
 class PdfScraper:
     """A PDF Scraper Object"""
-    def __init__(self, name, url, **kwargs):
+    def __init__(self, **kwargs):
+        self.data = restaurant_data(kwargs.get('city'), kwargs.get('district'), kwargs.get('restaurant'))
         self.today = kwargs.get("today", "no date available")
-        self.name = name
-        self.url = url
+        self.url = ''
         self.local_path = "/static/assets/pdfs_sites/"
 
-    def scrape_data(self, menu_name, custom_url=None):
-        self.url = custom_url if custom_url else self.url
+    def scrape_data(self, menu_name, custom_url):
+        self.url = custom_url
         embed_path = f"{self.local_path}{menu_name}"
         local_path = f".{self.local_path}{menu_name}"
         self.cleanup_old(local_path)

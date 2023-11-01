@@ -1,7 +1,7 @@
 from scraper.Scraper import Scraper
 
 
-class Drevenyorel(Scraper):
+class Drevenyvlk(Scraper):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

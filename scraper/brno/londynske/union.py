@@ -13,5 +13,3 @@ class Union(Scraper):
                 if "\xa0" not in str(dish):
                     result.append(dish)
         return result
-
-

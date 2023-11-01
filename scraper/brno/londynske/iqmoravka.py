@@ -1,5 +1,5 @@
 from scraper.Scraper import PdfScraper
-
+from pprint import pprint
 
 class Iqmoravka(PdfScraper):
     def __init__(self, **kwargs):

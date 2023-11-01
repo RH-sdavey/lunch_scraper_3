@@ -14,9 +14,4 @@ class Padowetz(Scraper):
         }[self.today]
 
     def cleanup(self, daily_menu):
-        daily_menu = daily_menu[self.todays_slice]
-        del daily_menu.contents[0]
-        del daily_menu.contents[0].contents[0:2]
-        del daily_menu.contents[2]
-        del daily_menu.contents[3:]
-        return daily_menu
+        return f'<div class="ml-2">{daily_menu}</div>'

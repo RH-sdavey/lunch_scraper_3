@@ -9,7 +9,6 @@ class Mezzanine(Scraper):
     def cleanup(self, daily_menu):
         return daily_menu
 
-
     @staticmethod
     def scrape_data():
         return '<embed src="/static/assets/pdfs_sites/mezza.pdf" width="1212px" height="1200px" />'

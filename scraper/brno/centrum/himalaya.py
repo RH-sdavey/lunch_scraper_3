@@ -11,4 +11,4 @@ class Himalaya(Scraper):
 
     @staticmethod
     def scrape_data(**kwargs):
-        return '<img src="/static/assets/pdfs_sites/himalaya.jpg"/>'
+        return '<img src="/static/assets/pdfs_sites/himalaya.jpg"/ class="col-md-12">'

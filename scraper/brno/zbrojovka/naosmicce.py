@@ -8,4 +8,5 @@ class Naosmicce(PdfScraper):
         super().__init__(**kwargs)
 
     def scrape_data(self, **kwargs):
-        return super(Naosmicce, self).scrape_data(self.brno_osmicce)
+        return '<embed src="http://www.naosmicce.cz/Menu.pdf" width="1212px" height="1200px" />'
+

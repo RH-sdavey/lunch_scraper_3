@@ -1,5 +1,6 @@
 import importlib
 from datetime import datetime
+from pprint import pprint
 
 from flask import Flask, render_template
 
@@ -51,18 +52,9 @@ def restaurant_route(city, district, restaurant):
     if today in ['Sat', 'Sun']:
         return render_template('weekend.html')
     daily_menu, rest_data = init_restaurant_module(city, district, restaurant, today)
-    if type(daily_menu) == str:  # static path to a pdf or img file
-        return render_template(
-            'restaurantPDF.html',
-            city=city,
-            district=district,
-            restaurant=restaurant,
-            restaurant_data=rest_data,
-            daily_menu=daily_menu
-        )
-
+    template_name_or_list = 'restaurantPDF.html' if type(daily_menu) == str else 'restaurant.html'
     return render_template(
-        'restaurant.html',
+        template_name_or_list=template_name_or_list,
         city=city,
         district=district,
         restaurant=restaurant,
@@ -80,14 +72,15 @@ def init_restaurant_module(*args):
     city, district, restaurant, today = args
     module = f'scraper.{city}.{district}.{restaurant}'
     gbl[module] = importlib.import_module(module)
+
     module = gbl[module].__dict__[restaurant.capitalize()](
         city=city,
         district=district,
         restaurant=restaurant,
         today=today
     )
+    # pprint(f"MODULE: {module}")
     return module.scrape_data(), module.data
-
 
 
 

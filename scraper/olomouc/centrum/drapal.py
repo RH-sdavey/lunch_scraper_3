@@ -7,4 +7,4 @@ class Drapal(PdfScraper):
         super().__init__(**kwargs)
 
     def scrape_data(self, **kwargs):
-        return super(Drapal, self).scrape_data(self.olo_drapal)
+        return '<embed src="http://www.restauracedrapal.cz/dennimenu.pdf" width="1212px" height="1200px" />'

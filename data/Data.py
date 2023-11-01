@@ -38,7 +38,7 @@ data = {
                         public_name="Mitrovski",
                         url="https://www.mitrovski.cz/menu/",
                         description="Small restaurant close to SQUARE HERE",
-                        html_section=('div', {'class': 'sw-c section-wrapper-content cf'})
+                        html_section=('div', {'class': 'sw-c cf'})
                         ),
                     Restaurant(
                         name='pupek',
@@ -61,12 +61,6 @@ data = {
                         description="Union",
                         html_section=('div', {'id': 'phocamenu'})
                         ),
-                    # Restaurant(
-                    #     name='babeta',
-                    #     url="https://www.restauraceunion.cz/tydenni-menu",
-                    #     description="Union",
-                    #     html_section=('div', {'id': 'phocamenu'})
-                    #     ),
                     Restaurant(
                         name='iqmoravka',
                         public_name="IQ Moravka",
@@ -83,7 +77,7 @@ data = {
                         ),
                     Restaurant(
                         name='tesare',
-                        public_name="U Tesare (TODO)",
+                        public_name="U Tesare",
                         url="http://www.utesare.cz/poledni-nabidka/",
                         description="Tesare",
                         html_section=('div', {'data-id': 'f96fb5e'})
@@ -102,16 +96,19 @@ data = {
                         ),
                     Restaurant(
                         name='stredovekakrcma',
-                        public_name="U stredoveka krcma (TODO)",
+                        public_name="U stredoveka krcma (OBSOLETE?)",
                         url="https://stredovekakrcma.cz/denni-menu/",
-                        description="Medieval themed rest in Brnop",
+                        description="""
+                        Medieval themed rest in Brno
+                        Possibly Obsolete
+                        Website showing old data""",
                         html_section=('div', {'class': 'et_pb_section_1'})
                         ),
                     Restaurant(
                         name='mamut',
-                        public_name="Mamut",
+                        public_name="Mamut  (OBSOLETE?)",
                         url="https://www.mamut-pub.cz/cz/page/nabidka.html",
-                        description="njlkfedjnwefjnk",
+                        description="Bistro upstairs, Pull your own beer downstairs",
                         html_section=('section', {'id': 'content'})
                         ),
                     Restaurant(
@@ -121,19 +118,13 @@ data = {
                         description="njlkfedjnwefjnk",
                         html_section=('div', {'fake': 'fake'})
                         ),
-                    Restaurant(
-                        name='continental',
-                        public_name="Hotel Continental",
-                        url="https://www.continentalbrno.cz/",
-                        description="njlkfedjnwefjnk",
-                        html_section=('div', {'fake': 'fake'})
-                        ),
+
                     Restaurant(
                         name='morgal',
                         public_name="Morgal",
                         url="https://www.morgal.cz/aktualni-nabidka-jidel",
                         description="njlkfedjnwefjnk",
-                        html_section=('div', {'class': 'jidlobox'})
+                        html_section=('div', {'class': 'nabidkatext'})
                         ),
                     Restaurant(
                         name='skog',
@@ -147,14 +138,14 @@ data = {
                         public_name="Jean Pauls Bistro (Zelny Trh)",
                         url="https://www.jpbistro.cz/menu-ztrh/index.php",
                         description="njlkfedjnwefjnk",
-                        html_section=('div', {'id': 'wrapper'})
+                        html_section=('div', {'fake': 'fake'})
                         ),
                     Restaurant(
                         name='padowetz',
                         public_name="Padowetz",
-                        url="http://www.restaurant-padowetz.cz/poledni-menu.htm",
+                        url="https://restaurant-padowetz.cz/poledni-menu",
                         description="njlkfedjnwefjnk",
-                        html_section=('div', {'class': 'tydeniMenu'})
+                        html_section=('div', {'class': 'col-md-7'})
                         ),
                     Restaurant(
                         name='pivniburza',
@@ -180,9 +171,9 @@ data = {
                     Restaurant(
                         name='stopkova',
                         public_name="Stopkova Kolkvona Pivnice",
-                        url="https://www.kolkovna.cz/cs/stopkova-plzenska-pivnice-16/denni-menu",
+                        url="https://stopkova.kolkovna.cz/#poledni-menu",
                         description="Very nice goose",
-                        html_section=('div', {'class': 'dailyMenuWeek'})
+                        html_section=('div', {'class': 'food-list-daily'})
                         ),
                     Restaurant(
                         name='jednabasen',
@@ -190,13 +181,6 @@ data = {
                         url="https://jedna-basen.cz/#",
                         description="dwdwdwdwdwdwdw",
                         html_section=('div', {'data-id': '066527c'})
-                        ),
-                    Restaurant(
-                        name='jasminabistro',
-                        public_name="Jasmina Bistro",
-                        url="https://jasminabistro.webnode.cz/menu/",
-                        description="dwdwdwdwdwdwdw",
-                        html_section=('div', {'class': 'section-wrapper-content'})
                         ),
                     Restaurant(
                         name='himalaya',
@@ -268,7 +252,7 @@ data = {
                         public_name="Potrefena Husa",
                         url="https://www.husa-olomouc.cz/cz/jidelni-listek/poledni-menu/",
                         description="a fine place",
-                        html_section=('table', {'class': 'jidlo'})
+                        html_section=('div', {'class': 'main'})
                         ),
                     Restaurant(
                         name='moravskarestaurace',
@@ -285,13 +269,6 @@ data = {
                         html_section=('div', {'fake': 'fake'})
                         ),
                     Restaurant(
-                        name='soupka',
-                        public_name="Soupka",
-                        url="https://www.soupka.cz/",
-                        description="Odwdwdswdwdwdw",
-                        html_section=('div', {'class': 'jXK9ad-SmKAyb'})
-                        ),
-                    Restaurant(
                         name='kozlovnam3',
                         public_name="Kozlovna M3",
                         url="https://www.kozlovnam3.cz/tydenni-menu/",
@@ -301,16 +278,9 @@ data = {
                     Restaurant(
                         name='morgans',
                         public_name="Morgans Restaurant",
-                        url="http://www.morgansrestaurant.cz/wp-content/uploads/",
+                        url="https://www.morgansrestaurant.cz/en/lunch-menu/",
                         description="wdwdw",
-                        html_section=('div', {'fake': 'fake'})
-                        ),
-                    Restaurant(
-                        name='jizdarna',
-                        public_name="Restaurace Jízdárna",
-                        url="https://restaurant-jizdarna.cz/poledni-menu/",
-                        description="wdwdw",
-                        html_section=('div', {'id': 'content'})
+                        html_section=('figure', {'class': 'wp-block-image'})
                         ),
                     ]
                 ),
@@ -324,13 +294,6 @@ data = {
                         description="Nice comfortable bar with friendly staff",
                         html_section=('div', {'class': 'obsah'})
                     ),
-                    Restaurant(
-                        name='chalupa',
-                        public_name="Chalupa na schůdkách",
-                        url="https://testchalupa.webnode.cz/jidelni-listek/#jidelni-listek-konec-roku-jpg",
-                        description="Excellent beer garden",
-                        html_section=('div', {'fake': 'fake'})
-                        ),
                     Restaurant(
                         name='ukamena',
                         public_name="U Kameňa",
@@ -350,7 +313,7 @@ data = {
                         public_name="Hostinec u Havlů",
                         url="https://www.uhavlu.cz/jidelni-listek/",
                         description="Bdwdwdwdw",
-                        html_section=('div', {'class': 'container'})
+                        html_section=('div', {'class': 'group'})
                         ),
                 ],
             ),
