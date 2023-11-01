@@ -1,4 +1,5 @@
 import os
+import time
 from time import sleep
 
 import requests
@@ -42,6 +43,7 @@ class Scraper(ABC):
         """
         html_tag, html_attr_selector = self.html_section
         desired_part = self.soup.find_all(html_tag, attrs=html_attr_selector, recursive=True)
+        print(f"DESIREDPART: {desired_part}")
         return desired_part
 
     def scrape_data(self):

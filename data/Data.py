@@ -324,16 +324,30 @@ data = {
         description='Ostrava is the capital of the Moravian-Silesian Region. It has about 285,000 inhabitants. It lies 15 km (9 mi) from the border with Poland, at the confluences of four rivers: Oder, Opava, Ostravice and Lučina. Ostrava is the third largest city in the Czech Republic.',
         districts=[
             District(
-                name="centrum",
+                name="organica",
                 restaurants=[
                     Restaurant(
-                        name='makalu',
-                        public_name="Mitrovski",
-                        url="http://www.nepalska-restaurace-makalu.cz/ostrava.php",
-                        description="Indian Restaurant with Mix Thali dishes",
-                        html_section=('div', {'id': 'T_menu'})
-                        )
-                    ]
+                        name='frankiespub',
+                        public_name="Frankies Pub",
+                        url="https://www.menicka.cz/7080-frankies-pub.html",
+                        description="Very friendly staff, directly opposite Organica",
+                        html_section=('div', {'class': 'menicka'})
+                        ),
+                    Restaurant(
+                        name='moravskachalupa',
+                        public_name="Moravska chalupa",
+                        url="https://www.moravskachalupa.cz/denni-menu",
+                        description="Looks good",
+                        html_section=('div', {'class': 'denni-menu'})
+                    ),
+                    Restaurant(
+                        name='guest',
+                        public_name="Guest Restaurant",
+                        url="http://www.guest-restaurant.com/",
+                        description="Looks overpriced and pretentious",
+                        html_section=('div', {'class': 'gk-cols'})
+                    ),
+                ]
                 )
             ]
         ),
