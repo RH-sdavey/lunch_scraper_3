@@ -347,11 +347,66 @@ data = {
                         description="Looks overpriced and pretentious",
                         html_section=('div', {'class': 'gk-cols'})
                     ),
+                    Restaurant(
+                        name='kaskada',
+                        public_name="Kaskada Restaurant",
+                        url="https://kaskadarestaurant.cz/",
+                        description="",
+                        html_section=('div', {'fake': 'fake'})
+                    ),
+                    Restaurant(
+                        name='yasmine',
+                        public_name="Yasmine Kebab and Grill",
+                        url="https://www.yasminekebabgrill.cz/",
+                        description="",
+                        html_section=('div', {'fake': 'fake'})
+                    ),
+                    Restaurant(
+                        name='knossos',
+                        public_name="Knossos Restaurant",
+                        url="http://www.knossos-restaurant.cz/",
+                        description="",
+                        html_section=('div', {'class': 'box-white'})
+                    ),
+                    Restaurant(
+                        name='urady',
+                        public_name="Restaurace U Rady",
+                        url="https://restauraceurady.cz/",
+                        description="Needs to be updated manually (for now)",
+                        html_section=('div', {'fake': 'fake'})
+                    ),
+                    Restaurant(
+                        name='septim',
+                        public_name="Restaurace Septim",
+                        url="https://restaurace-pizzerie-kavarna.com/restaurace_septim/modern/menicko_denni_menu/menicko_denni_menu.php",
+                        description="",
+                        html_section=('table', {'cellpadding': '4'})
+                    ),
+                    Restaurant(
+                        name='paleta',
+                        public_name="Paleta Restaurace",
+                        url="https://www.paletarestaurant.cz/menu/menu.php",
+                        description="Check this daily(might need to add day-slicing)",
+                        html_section=('table', {'class': 'meals-daily'})
+                    ),
+
                 ]
-                )
-            ]
-        ),
-    }
+                ),
+            District(
+                name="stodolni",
+                restaurants=[
+                    Restaurant(
+                        name='slezska',
+                        public_name="Slezska",
+                        url="https://www.slezska.com/?#poledni_menu",
+                        description="Check this daily(might need to add day-slicing)",
+                        html_section=('div', {'id': 'antilukas'})
+                    ),
+                ]
+            )
+        ],
+    ),
+}
 
 
 def data_dict():
