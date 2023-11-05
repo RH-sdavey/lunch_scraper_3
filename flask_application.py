@@ -49,7 +49,6 @@ def district_route(city, district):
 def restaurant_route(city, district, restaurant):
     """Route for any restaurant page (eg: /brno/londynske/pupek)"""
     today = datetime.now().ctime().split()[0]
-    today = "Fri"
     if today in ['Sat', 'Sun']:
         return render_template('weekend.html')
     daily_menu, rest_data = init_restaurant_module(city, district, restaurant, today)
