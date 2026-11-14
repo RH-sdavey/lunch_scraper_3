@@ -24,3 +24,6 @@ Today's lunch menus (*denní menu*) from restaurants' own websites, on one page.
 
 ## Restaurants (Ostrava, Organica)
 Kaskáda (Nová Karolina), Paleta, Restaurace U Rady (weekly PDF), Moravská chalupa.
+
+## Restaurants (around Štěpánkovice)
+Obecní dům Kobeřice: shown with its own embedded Menicka.cz widget (`EmbedScraper`), since that is the only place it publishes dishes.

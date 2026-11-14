@@ -64,3 +64,12 @@ def test_status_contract(monkeypatch):
     fill_cache(monkeypatch)
     d = TestClient(main.app).get("/status").json()
     assert isinstance(d["ok"], bool) and len(d["facts"]) == 3
+
+
+def test_embedded_widget_card(monkeypatch):
+    fill_cache(monkeypatch)
+    page = TestClient(main.app).get("/?day=2026-11-16").text
+    assert "Obecní dům Kobeřice" in page and 'src="https://www.menicka.cz/api/iframe/?id=6942' in page
+    api = TestClient(main.app).get("/api/menus?day=2026-11-16").json()
+    kob = next(r for r in api["restaurants"] if r["id"] == "obecni-dum-koberice")
+    assert kob["embed_url"].startswith("https://www.menicka.cz/api/iframe/")

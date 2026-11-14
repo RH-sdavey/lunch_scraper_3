@@ -83,6 +83,28 @@ class Scraper(ABC):
                 "website": cls.website or cls.url}
 
 
+class EmbedScraper(Scraper):
+    """For restaurants whose menu only exists in a widget they embed on their own site
+    (e.g. a Menicka.cz iframe). Nothing is fetched or scraped: the card shows the same
+    widget, loaded by the viewer's browser exactly as on the restaurant's page."""
+
+    embed_url: str = ""
+    embed_height: int = 560
+
+    def fetch(self) -> bytes:
+        return b""
+
+    def block_text(self, raw: bytes) -> str:
+        return ""
+
+    def parse(self, text: str, today: date) -> list[DayMenu]:
+        return []
+
+    @classmethod
+    def info(cls) -> dict:
+        return {**super().info(), "embed_url": cls.embed_url, "embed_height": cls.embed_height}
+
+
 class PdfScraper(Scraper):
     """For restaurants that publish the week as a PDF linked from a page."""
 
