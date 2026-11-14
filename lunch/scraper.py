@@ -105,6 +105,33 @@ class EmbedScraper(Scraper):
         return {**super().info(), "embed_url": cls.embed_url, "embed_height": cls.embed_height}
 
 
+class ImageScraper(Scraper):
+    """For restaurants that post the menu as a picture on their own page: find the current
+    picture (its address changes with each new menu) and show it in the card."""
+
+    image_pattern = re.compile(r"\.(png|jpe?g|webp)(\?|$)", re.I)
+    skip = re.compile(r"logo|icon|favicon|flag|facebook|instagram", re.I)
+
+    def find_image(self, raw: bytes) -> str:
+        soup = BeautifulSoup(raw, "lxml")
+        for img in soup.find_all("img"):
+            src = img.get("src") or img.get("data-src") or ""
+            if self.image_pattern.search(src) and not self.skip.search(src):
+                src = re.sub(r"\?.*$", "", src)
+                return urljoin(self.url, "https:" + src if src.startswith("//") else src)
+        raise LookupError("no menu picture on the page")
+
+    def parse(self, text: str, today: date) -> list[DayMenu]:
+        return []
+
+    def scrape(self, today: date, raw: bytes | None = None) -> Menu:
+        try:
+            raw = raw if raw is not None else self.fetch()
+            return Menu(restaurant=self.id, image=self.find_image(raw))
+        except Exception as e:  # noqa: BLE001
+            return Menu(restaurant=self.id, error=f"{type(e).__name__}: {str(e)[:200]}")
+
+
 class PdfScraper(Scraper):
     """For restaurants that publish the week as a PDF linked from a page."""
 

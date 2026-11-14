@@ -1,4 +1,4 @@
-<article class="card {{ 'empty' if not (c.embed or (c.day and c.day.dishes)) }}" id="card-{{ c.id }}">
+<article class="card {{ 'empty' if not (c.embed or c.image or (c.day and c.day.dishes)) }}" id="card-{{ c.id }}">
   <header>
     <div>
       <h2><a href="{{ c.website }}" target="_blank" rel="noopener">{{ c.name }}</a></h2>
@@ -12,6 +12,9 @@
     <iframe class="embed" src="{{ c.embed_url }}" height="{{ c.embed_height }}" loading="lazy"
             title="{{ c.name }} daily menu"></iframe>
     <p class="checked">Shown with the restaurant's own Menicka.cz widget</p>
+  {% elif c.image %}
+    <a href="{{ c.image }}" target="_blank" rel="noopener"><img class="menu-img" src="{{ c.image }}" alt="{{ c.name }} lunch menu" loading="lazy"></a>
+    <p class="checked">The restaurant posts its menu as a picture · tap to enlarge</p>
   {% elif c.day and c.day.dishes %}
     <ol class="menu">
       {% set ns = namespace(n=0) %}

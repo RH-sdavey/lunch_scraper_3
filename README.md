@@ -5,7 +5,7 @@ Today's lunch menus (*denní menu*) from restaurants' own websites, on one page.
 > v3 (Flask, Brno / Olomouc / Ostrava, 2022-23) is kept as the git tag [`v3`](../../tree/v3).
 
 ## How it works
-- **`lunch/scraper.py`**: `Scraper(ABC)` fetches a restaurant's page, finds the menu block and hands its text to the subclass's `parse()`. `PdfScraper` does the same for weekly PDFs. Subclasses **register themselves**: `class Paleta(Scraper, id="paleta")`.
+- **`lunch/scraper.py`**: `Scraper(ABC)` fetches a restaurant's page, finds the menu block and hands its text to the subclass's `parse()`. `PdfScraper` does the same for weekly PDFs, `ImageScraper` shows a menu posted as a picture, and `EmbedScraper` shows a menu widget the restaurant embeds on its own site. Subclasses **register themselves**: `class Paleta(Scraper, id="paleta")`.
 - **`lunch/restaurants/<city>/<restaurant>.py`**: one small file per restaurant with its own parsing rules, returning structured `DayMenu` / `Dish` (soup or main, name, price).
 - **`lunch/parsing.py`**: shared Czech-menu helpers (weekday names, week dates, prices, allergen clean-up).
 - **`lunch/store.py`**: a cache in `data/menus.json`. It refreshes politely (at most once per 10 minutes per restaurant, 2 s between restaurants), and a failed fetch keeps the last good menu.
@@ -26,4 +26,7 @@ Today's lunch menus (*denní menu*) from restaurants' own websites, on one page.
 Kaskáda (Nová Karolina), Paleta, Restaurace U Rady (weekly PDF), Moravská chalupa.
 
 ## Restaurants (around Štěpánkovice)
-Obecní dům Kobeřice: shown with its own embedded Menicka.cz widget (`EmbedScraper`), since that is the only place it publishes dishes.
+- Obecní dům Kobeřice: shown with its own embedded Menicka.cz widget (`EmbedScraper`), since that's the only place it publishes dishes.
+- Restaurace U Šťura (Kravaře): posts its menu as a picture, which `ImageScraper` finds and shows.
+
+Looked at but not addable (2026-11): Buly Aréna, Hasičárna u Horsta, ELVE, KáDéčko, Pivnice U Milana. Their daily menus are on Facebook only, which programs can't read. U Kozla, Na statku and Rohan have no daily menu online.

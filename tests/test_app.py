@@ -13,7 +13,7 @@ from lunch.scraper import Scraper  # noqa: E402
 
 FIX = Path(__file__).parent / "fixtures"
 FIXTURES = {"moravska-chalupa": "moravska_chalupa.html", "kaskada": "kaskada.html",
-            "paleta": "paleta.html", "u-rady": "u_rady_menu.pdf"}
+            "paleta": "paleta.html", "u-rady": "u_rady_menu.pdf", "u-stura": "u_stura.html"}
 
 
 def fill_cache(monkeypatch):
@@ -73,3 +73,9 @@ def test_embedded_widget_card(monkeypatch):
     api = TestClient(main.app).get("/api/menus?day=2026-11-16").json()
     kob = next(r for r in api["restaurants"] if r["id"] == "obecni-dum-koberice")
     assert kob["embed_url"].startswith("https://www.menicka.cz/api/iframe/")
+
+
+def test_picture_menu_card(monkeypatch):
+    fill_cache(monkeypatch)
+    page = TestClient(main.app).get("/?day=2026-11-16").text
+    assert "Restaurace U Šťura" in page and "listopad2.png" in page and 'class="menu-img"' in page

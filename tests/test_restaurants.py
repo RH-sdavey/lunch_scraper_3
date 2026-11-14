@@ -62,3 +62,9 @@ def test_u_rady_pdf():
         ("Smažená kuřecí játra, bramborová kaše, ledový salát se špekem", 169),
         ("Hovězí steak, omáčka z pečených paprik, hranolky", 219)]
     assert m.days[1].dishes == [] and "Státní svátek" in m.days[1].note
+
+
+def test_u_stura_menu_picture():
+    m = Scraper.registry["u-stura"]().scrape(TODAY, raw=(FIX / "u_stura.html").read_bytes())
+    assert m.error is None
+    assert m.image == "https://cdn1.artcltn.com/storage/37586/01a1844c-67d8-70e8-bff3-12f4ec51e378/listopad2.png"

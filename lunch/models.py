@@ -24,6 +24,7 @@ class Menu:
     restaurant: str               # registry id
     days: list[DayMenu] = field(default_factory=list)
     error: str | None = None
+    image: str | None = None      # a restaurant that publishes its menu as a picture
 
     def for_day(self, d: date) -> DayMenu | None:
         return next((x for x in self.days if x.day == d), None)
@@ -38,4 +39,4 @@ class Menu:
     def from_dict(cls, d: dict) -> "Menu":
         days = [DayMenu(day=date.fromisoformat(x["day"]), note=x.get("note"),
                         dishes=[Dish(**dish) for dish in x["dishes"]]) for x in d.get("days", [])]
-        return cls(restaurant=d["restaurant"], days=days, error=d.get("error"))
+        return cls(restaurant=d["restaurant"], days=days, error=d.get("error"), image=d.get("image"))

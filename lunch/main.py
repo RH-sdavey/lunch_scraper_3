@@ -66,6 +66,10 @@ def cards(day: date) -> list[dict]:
         # has_week: the restaurant posted the menu for *this* week (so a missing day means "closed")
         this_week = bool(menu and any(week_start(x.day) == week_start(day) for x in menu.days))
         info = cls.info()
+        if menu and menu.image:                       # menu published as a picture
+            out.append({**info, "day": None, "has_week": True, "error": menu.error, "image": menu.image,
+                        "fetched_at": entry["fetched_at"]})
+            continue
         if info.get("embed_url"):                     # widget-only restaurant: always "has a menu"
             out.append({**info, "day": None, "has_week": True, "error": None, "fetched_at": None, "embed": True})
             continue
@@ -74,7 +78,7 @@ def cards(day: date) -> list[dict]:
                     "fetched_at": entry["fetched_at"] if entry else None})
     # restaurants with food today first
     # restaurants with food today first (embedded widgets count as food), then the rest
-    return sorted(out, key=lambda c: (not (c.get("embed") or (c["day"] and c["day"].dishes)), c["name"]))
+    return sorted(out, key=lambda c: (not (c.get("embed") or c.get("image") or (c["day"] and c["day"].dishes)), c["name"]))
 
 
 def day_label(d: date) -> dict:
@@ -113,7 +117,7 @@ def api_menus(day: str | None = None):
     return {"day": d.isoformat(), "restaurants": [
         {**{k: c[k] for k in ("id", "name", "city", "area", "website", "error", "fetched_at")},
          "note": c["day"].note if c["day"] else None,
-         "embed_url": c.get("embed_url"),
+         "embed_url": c.get("embed_url"), "image": c.get("image"),
          "dishes": [vars(x) for x in c["day"].dishes] if c["day"] else []} for c in cards(d)]}
 
 
