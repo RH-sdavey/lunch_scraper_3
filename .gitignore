@@ -1,6 +1,7 @@
-.idea/encodings.xml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/lunch_scraper_3.iml
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+.DS_Store
+.idea/
+.venv/

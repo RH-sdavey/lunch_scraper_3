@@ -1,0 +1,56 @@
+/* Lunch Scraper v4 - HomeHub family palette, cards styled like a printed lunch menu */
+:root {
+  --paper: #EEF2EC; --card: #FFFDF7; --ink: #1E3B2F; --muted: #6B7F72; --line: #D5DED6;
+  --gold: #D9A426; --tomato: #B8452E;
+  --display: "Bricolage Grotesque", system-ui, sans-serif; --body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #14201A; --card: #1E2C25; --ink: #E3ECE5; --muted: #93A79A; --line: #2D3F35; --gold: #E8B83E; --tomato: #E07A66; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.45 var(--body); }
+main { max-width: 1180px; margin: 0 auto; padding: 14px 16px 40px; }
+a { color: inherit; }
+.hub-back { display: inline-block; font-size: .85rem; color: var(--muted); text-decoration: none; padding: 2px 0 8px; }
+
+.top { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+h1 { font-family: var(--display); font-size: 1.9rem; margin: 0; line-height: 1.1; }
+h1 span { display: block; font-size: 1rem; font-weight: 600; color: var(--muted); margin-top: 4px; }
+.days { display: flex; gap: 6px; }
+.days a { text-decoration: none; text-align: center; min-width: 48px; padding: 6px 8px; border-radius: 10px;
+          border: 1px solid var(--line); font-weight: 700; line-height: 1.1; }
+.days a small { display: block; font-weight: 400; font-size: .72rem; color: var(--muted); }
+.days a[aria-current] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.days a[aria-current] small { color: inherit; opacity: .8; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px 12px;
+        box-shadow: 0 1px 0 var(--line); border-top: 4px solid var(--tomato); }
+.card.empty { border-top-color: var(--line); opacity: .85; }
+.card > header { display: flex; justify-content: space-between; align-items: start; gap: 10px;
+                 padding-bottom: 10px; margin-bottom: 8px; border-bottom: 1px double var(--line); }
+.card h2 { font-family: var(--display); font-size: 1.3rem; margin: 0; }
+.card h2 a { text-decoration: none; }
+.card .area { font-size: .8rem; color: var(--muted); }
+.refresh { background: none; border: 1px solid var(--line); border-radius: 50%; width: 32px; height: 32px;
+           color: var(--muted); cursor: pointer; font-size: 1rem; }
+.refresh:hover { color: var(--ink); border-color: var(--ink); }
+.refresh.htmx-request { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .refresh.htmx-request { animation: none; } }
+
+ol.menu { list-style: none; margin: 0; padding: 0; }
+ol.menu li { display: flex; align-items: baseline; gap: 6px; padding: 5px 0; }
+ol.menu li .name { flex: 0 1 auto; }
+ol.menu li .name b { color: var(--tomato); margin-right: 2px; }
+ol.menu li .dots { flex: 1 1 20px; border-bottom: 2px dotted var(--line); transform: translateY(-4px); min-width: 14px; }
+ol.menu li .price { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; }
+ol.menu li.soup { font-style: italic; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 4px; }
+ol.menu li.soup .price { font-style: normal; color: var(--ink); }
+
+.note { color: var(--muted); margin: 8px 0; }
+.error { color: var(--tomato); font-size: .8rem; margin: 8px 0 0; }
+.checked { color: var(--muted); font-size: .75rem; margin: 10px 0 0; text-align: right; }
+footer { color: var(--muted); font-size: .8rem; margin-top: 22px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }

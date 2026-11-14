@@ -1,0 +1,30 @@
+# Lunch Scraper v4 - daily menus around Organica, on HomeHub.
+# Start: docker compose up -d --build    Tests: docker compose exec lunch pytest -q tests
+services:
+  lunch:
+    build: .
+    image: lunchscraper:latest
+    container_name: lunchscraper
+    ports:
+      - "8085:8000"
+    volumes:
+      - ./data:/data                 # cached menus
+    environment:
+      - TZ=Europe/Prague
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    labels:
+      homehub.app: "Lunch"
+      homehub.icon: "🍲"
+      homehub.port: "8085"
+      homehub.description: "Today's lunch menus around Organica"
+      homehub.status: "http://lunchscraper:8000/status"
+    networks: [homehub]
+
+networks:
+  homehub:
+    external: true

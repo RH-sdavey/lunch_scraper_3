@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunch · {{ label.cz }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+  <script src="https://unpkg.com/htmx.org@2.0.3/dist/htmx.min.js" defer></script>
+</head>
+<body>
+<main>
+  <a class="hub-back" href="//{{ request.url.hostname }}:8080/">← Hub</a>
+  <header class="top">
+    <h1>🍲 Lunch <span>{{ label.rel }} · {{ label.cz }}</span></h1>
+    <nav class="days" aria-label="Day of the week">
+      {% for w in week %}
+        <a href="/?day={{ w.iso }}" {% if w.iso == selected %}aria-current="date"{% endif %}>{{ w.cz.split(' ')[0][:2] }}<small>{{ w.cz.split(' ', 1)[1] }}</small></a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  <section class="cards">
+    {% for c in cards %}{% include "_card.html" %}{% endfor %}
+  </section>
+
+  <footer>
+    Menus are read from each restaurant's own website a few times a day. Prices in Kč.
+    <a href="/api/menus?day={{ selected }}">JSON</a>
+  </footer>
+</main>
+</body>
+</html>

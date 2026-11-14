@@ -1,0 +1,33 @@
+<article class="card {{ 'empty' if not (c.day and c.day.dishes) }}" id="card-{{ c.id }}">
+  <header>
+    <div>
+      <h2><a href="{{ c.website }}" target="_blank" rel="noopener">{{ c.name }}</a></h2>
+      <div class="area">{{ c.area }}</div>
+    </div>
+    <button class="refresh" title="Check {{ c.name }} again" aria-label="Check {{ c.name }} again"
+            hx-post="/restaurants/{{ c.id }}/refresh?day={{ selected }}" hx-target="#card-{{ c.id }}" hx-swap="outerHTML">↻</button>
+  </header>
+
+  {% if c.day and c.day.dishes %}
+    <ol class="menu">
+      {% set ns = namespace(n=0) %}
+      {% for d in c.day.dishes %}
+        {% if d.kind == 'soup' %}
+          <li class="soup"><span class="name">🍲 {{ d.name }}</span>{% if d.price %}<span class="dots"></span><span class="price">{{ d.price }} Kč</span>{% endif %}</li>
+        {% else %}
+          {% set ns.n = ns.n + 1 %}
+          <li><span class="name"><b>{{ ns.n }}.</b> {{ d.name }}</span>{% if d.price %}<span class="dots"></span><span class="price">{{ d.price }} Kč</span>{% endif %}</li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  {% elif c.day and c.day.note %}
+    <p class="note">{{ c.day.note }}</p>
+  {% elif c.has_week %}
+    <p class="note">No lunch menu for this day.</p>
+  {% else %}
+    <p class="note">This week's menu isn't up yet.</p>
+  {% endif %}
+
+  {% if c.error %}<p class="error">Last check failed, the site may have changed: {{ c.error }}</p>{% endif %}
+  {% if c.fetched_at %}<p class="checked">Checked {{ c.fetched_at[11:16] }}{% if c.fetched_at[:10] != selected %} on {{ c.fetched_at[8:10] }}.{{ c.fetched_at[5:7] }}.{% endif %}</p>{% endif %}
+</article>
